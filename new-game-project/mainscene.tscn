@@ -1,0 +1,718 @@
+[gd_scene format=3 uid="uid://bvgn2ofcb603x"]
+
+[ext_resource type="Script" uid="uid://bn1gpbfo3exqu" path="res://mainscene.gd" id="1_wtdyi"]
+[ext_resource type="Script" uid="uid://6d4qayarg1c7" path="res://reactor.gd" id="2_xtb1e"]
+[ext_resource type="FontFile" uid="uid://c2l07f2mmfm3h" path="res://assets/fonts/cyberpunk_is_not_dead/CIND.otf" id="3_0lhry"]
+[ext_resource type="Texture2D" uid="uid://cddqohxgg6x1r" path="res://assets/IMG_1036.PNG" id="3_5lfti"]
+[ext_resource type="Texture2D" uid="uid://db7ewkmkr8ja6" path="res://assets/IMG_1035.PNG" id="4_8bn17"]
+[ext_resource type="Texture2D" uid="uid://da3y8odu4fc7h" path="res://assets/IMG_1045.PNG" id="4_fl65m"]
+[ext_resource type="Texture2D" uid="uid://ucopc7iel8p3" path="res://assets/IMG_1037.PNG" id="4_sbvtr"]
+[ext_resource type="Texture2D" uid="uid://61r0mwwkhmue" path="res://assets/IMG_1044.PNG" id="6_1ftms"]
+[ext_resource type="Texture2D" uid="uid://gun3juvdlc4d" path="res://assets/IMG_1041.PNG" id="6_fl65m"]
+[ext_resource type="Texture2D" uid="uid://in75ctp5wnbx" path="res://assets/IMG_1046.PNG" id="8_8bn17"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nn0u8"]
+bg_color = Color(0.14, 0.14, 0.14, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wtdyi"]
+font = ExtResource("3_0lhry")
+font_size = 27
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_76yo1"]
+texture = ExtResource("4_fl65m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8bn17"]
+texture = ExtResource("6_fl65m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ftms"]
+texture = ExtResource("4_fl65m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ibrq"]
+texture = ExtResource("8_8bn17")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0lhry"]
+texture = ExtResource("6_fl65m")
+
+[sub_resource type="LabelSettings" id="LabelSettings_8bn17"]
+font_size = 32
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ftms"]
+font_size = 32
+font_color = Color(0.6333332, 0, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0lhry"]
+font = ExtResource("3_0lhry")
+font_size = 48
+
+[sub_resource type="Animation" id="Animation_0ibrq"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("message:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-760, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("message:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(295, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HBoxContainer:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HBoxContainer:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_4ofsq"]
+resource_name = "new_animation"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("message:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-760, -0.25, 0, 0.25, 0, 278, -0.16666667, -173, 0, 0, 278, -0.07388889, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.36666667, 1.5333333)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("message:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(295, -0.25, 0, 0.25, 0, 295, -0.16666667, 0, 0, 0, 295, -0.07388889, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.36666667, 1.5333333)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer:modulate:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.028333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.17)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer:modulate:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.028333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.17)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HBoxContainer:modulate:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.028333334, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.17)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HBoxContainer:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.028333334, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.17)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4p23x"]
+_data = {
+&"RESET": SubResource("Animation_0ibrq"),
+&"new_animation": SubResource("Animation_4ofsq")
+}
+
+[sub_resource type="Animation" id="Animation_xtb1e"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1163, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_dn5c8"]
+resource_name = "elo"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1163, -0.25, 0, 0.25, 0, 0, -0.16666667, -193.83334, 0, 0),
+"times": PackedFloat32Array(0, 0.26666665)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.26666665)
+}
+
+[sub_resource type="Animation" id="Animation_5lfti"]
+resource_name = "eloback"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1203, -0.16666667, -200.5, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sbvtr"]
+_data = {
+&"RESET": SubResource("Animation_xtb1e"),
+&"elo": SubResource("Animation_dn5c8"),
+&"eloback": SubResource("Animation_5lfti")
+}
+
+[node name="Mainscene" type="Node2D" unique_id=1416502856]
+script = ExtResource("1_wtdyi")
+
+[node name="buttons" type="Node2D" parent="." unique_id=1620099738]
+
+[node name="reactor" type="Button" parent="buttons" unique_id=1954804365]
+offset_left = 122.0
+offset_top = 293.0
+offset_right = 228.0
+offset_bottom = 394.0
+text = "pattern quest"
+
+[node name="quests" type="Node2D" parent="." unique_id=1563291383]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="quests" unique_id=1283223873]
+
+[node name="allquests" type="Panel" parent="quests/CanvasLayer" unique_id=1073869170]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1163.0
+offset_right = -1162.9995
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nn0u8")
+
+[node name="reactor" type="Control" parent="quests/CanvasLayer/allquests" unique_id=197739762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_xtb1e")
+
+[node name="Label" type="Label" parent="quests/CanvasLayer/allquests/reactor" unique_id=247070436]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 20.0
+offset_right = 192.0
+offset_bottom = 58.0
+grow_horizontal = 2
+text = "cos tam jakias minigra"
+label_settings = SubResource("LabelSettings_wtdyi")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="quests/CanvasLayer/allquests/reactor" unique_id=783126428]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -150.0
+offset_right = 310.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Panel" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer" unique_id=343505992]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+texture = ExtResource("3_5lfti")
+expand_mode = 1
+
+[node name="ColorRect" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel" unique_id=672358682]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -153.0
+offset_right = 151.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_8bn17")
+expand_mode = 1
+
+[node name="displaypanels" type="GridContainer" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect" unique_id=1303888276]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.0
+offset_top = -120.0
+offset_right = 109.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="ColorRect" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=1336408034]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="ColorRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=541497312]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="ColorRect3" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=330554819]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="ColorRect4" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=1047775044]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="ColorRect5" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=1178175118]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="ColorRect6" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=1731203561]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="ColorRect7" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=530583366]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="ColorRect8" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=537912030]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="ColorRect9" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/displaypanels" unique_id=1992801701]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("4_fl65m")
+expand_mode = 1
+
+[node name="lights" type="HBoxContainer" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect" unique_id=950194146]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -36.0
+offset_right = 80.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 14
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/lights" unique_id=393652894]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/lights" unique_id=66918869]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/lights" unique_id=735030143]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/lights" unique_id=1284285476]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel/ColorRect/lights" unique_id=1498280117]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="Panel2" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer" unique_id=1740844384]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+texture = ExtResource("4_sbvtr")
+expand_mode = 1
+
+[node name="reactorbuttons" type="GridContainer" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2" unique_id=84271820]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -125.0
+offset_right = 125.0
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 26
+theme_override_constants/v_separation = 17
+columns = 3
+
+[node name="1" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1492149175]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8bn17")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="2" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=211584053]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="3" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=956749370]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="4" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1683502635]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="5" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1192025484]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="6" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1365988813]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="7" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1101730822]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="8" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=18776157]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="9" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1839308521]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
+
+[node name="lights" type="HBoxContainer" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2" unique_id=1935986542]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -34.0
+offset_right = 80.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 14
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/lights" unique_id=951604926]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/lights" unique_id=159204288]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/lights" unique_id=1860570331]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/lights" unique_id=1770349104]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/lights" unique_id=1844141548]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("6_1ftms")
+expand_mode = 1
+
+[node name="Panel3" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer" unique_id=774612646]
+visible = false
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+texture = ExtResource("3_5lfti")
+expand_mode = 1
+
+[node name="ColorRect" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel3" unique_id=1038438754]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -153.0
+offset_right = 151.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_8bn17")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel3/ColorRect" unique_id=299043054]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -55.5
+offset_right = 241.0
+offset_bottom = 38.5
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel3/ColorRect/VBoxContainer" unique_id=185906947]
+layout_mode = 2
+text = "poprawnie: 1"
+label_settings = SubResource("LabelSettings_8bn17")
+
+[node name="Label2" type="Label" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel3/ColorRect/VBoxContainer" unique_id=1581021801]
+layout_mode = 2
+text = "sabotaż: 1"
+label_settings = SubResource("LabelSettings_1ftms")
+
+[node name="message" type="Label" parent="quests/CanvasLayer/allquests/reactor" unique_id=1199825114]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1336.0002
+offset_top = -29.0
+offset_right = -734.99927
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(300, 0)
+text = "zadanie wykonane!"
+label_settings = SubResource("LabelSettings_0lhry")
+
+[node name="Control" type="Control" parent="quests/CanvasLayer/allquests/reactor" unique_id=1302380512]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Timer" type="Timer" parent="quests/CanvasLayer/allquests/reactor" unique_id=430513288]
+one_shot = true
+
+[node name="resettimer" type="Timer" parent="quests/CanvasLayer/allquests/reactor" unique_id=1368096717]
+one_shot = true
+
+[node name="timerblank" type="Timer" parent="quests/CanvasLayer/allquests/reactor" unique_id=1076056009]
+wait_time = 0.7
+one_shot = true
+
+[node name="minigamedone" type="AnimationPlayer" parent="quests/CanvasLayer/allquests/reactor" unique_id=582192880]
+libraries/ = SubResource("AnimationLibrary_4p23x")
+autoplay = &"RESET"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="quests/CanvasLayer/allquests/reactor" unique_id=1866609762]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_sbvtr")
+
+[connection signal="pressed" from="buttons/reactor" to="." method="_on_reactor_pressed"]
+[connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/Timer" to="quests/CanvasLayer/allquests/reactor" method="_on_timer_timeout"]
+[connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/resettimer" to="quests/CanvasLayer/allquests/reactor" method="_on_resettimer_timeout"]
+[connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/timerblank" to="quests/CanvasLayer/allquests/reactor" method="_on_timerblank_timeout"]
+[connection signal="animation_finished" from="quests/CanvasLayer/allquests/reactor/minigamedone" to="quests/CanvasLayer/allquests/reactor" method="_on_minigamedone_animation_finished"]
