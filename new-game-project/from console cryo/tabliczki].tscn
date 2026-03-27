@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://dma7er1j8yxbu"]
+
+[ext_resource type="Texture2D" uid="uid://cwrce7ucxg586" path="res://from console cryo/maszyny cryo_background_grayed_out.png" id="1_mkx8h"]
+[ext_resource type="FontFile" uid="uid://28e2vuijk0sj" path="res://main menu/Lucznik1303Plus-z0aG.ttf" id="2_nhx16"]
+[ext_resource type="Texture2D" uid="uid://dpm2oex10t25j" path="res://assets/button.PNG" id="3_d33cl"]
+[ext_resource type="Texture2D" uid="uid://4t0wvovfn0v3" path="res://assets/Buttonmenupressed.png" id="4_nu46t"]
+[ext_resource type="Script" uid="uid://b2epatnpqog33" path="res://from console cryo/return_to_cryu.gd" id="5_xi0ow"]
+[ext_resource type="Texture2D" uid="uid://csr5tfry512xh" path="res://main menu/IMG_2913.png" id="6_qj8jj"]
+[ext_resource type="AudioStream" uid="uid://bee1bfurtptwb" path="res://starts/ForMillionsAmbience.wav" id="7_nhx16"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vttto"]
+texture = ExtResource("1_mkx8h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_egglv"]
+texture = ExtResource("3_d33cl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3p2fk"]
+texture = ExtResource("4_nu46t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5aqwm"]
+texture = ExtResource("4_nu46t")
+
+[node name="Node2D" type="Node2D" unique_id=1054094071]
+
+[node name="Panel" type="Panel" parent="." unique_id=481356507]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vttto")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=259519032]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 539.0
+offset_right = 673.0
+offset_bottom = 619.0
+
+[node name="return" type="Button" parent="Panel/VBoxContainer" unique_id=720603284]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_nhx16")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_egglv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3p2fk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5aqwm")
+text = "wróć"
+script = ExtResource("5_xi0ow")
+
+[node name="Img2913" type="Sprite2D" parent="." unique_id=1770212612]
+position = Vector2(229, 413)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_qj8jj")
+
+[node name="Label" type="Label" parent="Img2913" unique_id=696997633]
+offset_left = -239.99998
+offset_top = 15.0
+offset_right = -142.99998
+offset_bottom = 38.0
+scale = Vector2(5, 5)
+theme_override_colors/font_color = Color(0.9170197, 0.9800554, 0.9825427, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5686275)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_nhx16")
+text = "Astrofizyk"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Img2913" unique_id=421887939]
+offset_left = -105.0
+offset_top = -132.5
+offset_right = -8.0
+offset_bottom = -109.5
+scale = Vector2(2.2, 2.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.49411765)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_nhx16")
+text = "Horpach"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Img2914" type="Sprite2D" parent="." unique_id=1516867428]
+position = Vector2(923.99994, 413)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_qj8jj")
+
+[node name="Label" type="Label" parent="Img2914" unique_id=207964245]
+offset_left = -239.99998
+offset_top = 15.0
+offset_right = -142.99998
+offset_bottom = 38.0
+scale = Vector2(5, 5)
+theme_override_colors/font_color = Color(0.9170197, 0.9800554, 0.9825427, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5686275)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_nhx16")
+text = "Planetolog"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Img2914" unique_id=1806427865]
+offset_left = -105.0
+offset_top = -132.5
+offset_right = -8.0
+offset_bottom = -109.5
+scale = Vector2(2.2, 2.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.49411765)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_nhx16")
+text = "Ballmin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Img2915" type="Sprite2D" parent="." unique_id=1701722350]
+position = Vector2(567, 189)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_qj8jj")
+
+[node name="Label" type="Label" parent="Img2915" unique_id=1761601666]
+offset_left = -287.5
+offset_top = 15.0
+offset_right = -173.5
+offset_bottom = 38.0
+scale = Vector2(5, 5)
+theme_override_colors/font_color = Color(0.9170197, 0.9800554, 0.9825427, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5686275)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_nhx16")
+theme_override_font_sizes/font_size = 10
+text = "Dowódca Kolonizacji"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Img2915" unique_id=2053363977]
+offset_left = -105.0
+offset_top = -132.5
+offset_right = -8.0
+offset_bottom = -109.5
+scale = Vector2(2.2, 2.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.49411765)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_nhx16")
+text = "Lauda"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ForMillionsAmbience" type="AudioStreamPlayer2D" parent="." unique_id=321594027]
+position = Vector2(453, 405)
+stream = ExtResource("7_nhx16")
+autoplay = true
+
+[connection signal="pressed" from="Panel/VBoxContainer/return" to="Panel/VBoxContainer/return" method="_on_return_pressed"]

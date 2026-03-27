@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://kgykp8r08ipl"]
+
+[ext_resource type="Texture2D" uid="uid://3a2h80ybem4u" path="res://endings/zkonczenie planeta.png" id="1_vw33o"]
+[ext_resource type="FontFile" uid="uid://28e2vuijk0sj" path="res://main menu/Lucznik1303Plus-z0aG.ttf" id="2_yi4rn"]
+[ext_resource type="Script" uid="uid://d0d0vmkjbqmpq" path="res://endings/label.gd" id="3_6yk07"]
+[ext_resource type="Texture2D" uid="uid://dpm2oex10t25j" path="res://assets/button.PNG" id="4_tpy8a"]
+[ext_resource type="Texture2D" uid="uid://4t0wvovfn0v3" path="res://assets/Buttonmenupressed.png" id="5_bhiqc"]
+[ext_resource type="Script" uid="uid://ypjf428m44xk" path="res://main menu/button_return.gd" id="6_pt6jv"]
+[ext_resource type="AudioStream" uid="uid://cfpm80ga22sxp" path="res://endings/LądowanieStatku.wav" id="7_bhiqc"]
+[ext_resource type="AudioStream" uid="uid://bee1bfurtptwb" path="res://starts/ForMillionsAmbience.wav" id="8_pt6jv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7snv0"]
+texture = ExtResource("1_vw33o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4bj5r"]
+texture = ExtResource("4_tpy8a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hmx80"]
+texture = ExtResource("5_bhiqc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ergkm"]
+texture = ExtResource("5_bhiqc")
+
+[node name="endingkat" type="Node2D" unique_id=331860073]
+
+[node name="Panel" type="Panel" parent="." unique_id=2063639954]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7snv0")
+
+[node name="Label2" type="Label" parent="Panel" unique_id=345630840]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1136.0
+offset_top = -748.0
+offset_right = -586.0
+offset_bottom = 105.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5372549)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_yi4rn")
+theme_override_font_sizes/font_size = 17
+text = "Byłeś posłuszny do samego końca i nie sprzeciwiłeś się rozkazom, mimo intuicji, która podpowiadała zupełnie inne rozwiązania. Ale ty pozostałeś nieugięty – dzięki tobie Niezwyciężony dotarł na powierzchnię Eden, a twoje następne działania przebiegły zgodnie z instrukcją. Odblokowałeś magazyn bomb, uzbroiłeś najpotężniejszą z nich i przekazałeś dowództwo trzem formom życia, które zajęły się resztą planu. Wybudziły się ze swoich kriokomór krótko po lądowaniu, a już po kilku dniach istoty były gotowe do działania. Same skierowały bomby ku największemu miastu na Edenie i gdy te docierały do celu, ty mogłeś jedynie obserwować rozgrywający się w oddali chaos. Świat dosłownie zapłonął – lasy stanęły w ogniu, miasta obróciły się w pył, a z rozwiniętej technologicznie cywilizacji… Nie pozostało nic. Jedynie trzech kolonizatorów oraz zamknięty w statku R0G4RTH-19-61 obserwowali, jak całe życie znika w zaledwie ułamku sekundy.
+Za kilka lat miało się ono odrodzić, ale przez mnogość zniszczeń i skażenie atmosfery toksycznymi oparami Eden stała się planetą niezdatną do życia. Maszyna odpowiedzialna za konserwację Niezwyciężonego została niedługo później wyłączona, a statek przemianowano na zwyczajny transportowiec cywilny. Kolonizatorów zaś nagrodzono – ci stali się symbolem nowej ery, w którą właśnie wkroczyła Ziemia. "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+visible_characters_behavior = 2
+script = ExtResource("3_6yk07")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=46756389]
+offset_left = 954.0
+offset_top = 3.0
+offset_right = 1154.0
+offset_bottom = 83.0
+
+[node name="return" type="Button" parent="VBoxContainer" unique_id=1385377872]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_yi4rn")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_4bj5r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hmx80")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ergkm")
+text = "kontynuuj"
+script = ExtResource("6_pt6jv")
+
+[node name="LądowanieStatku" type="AudioStreamPlayer2D" parent="." unique_id=165024679]
+position = Vector2(625, 357)
+stream = ExtResource("7_bhiqc")
+volume_db = 1.0
+autoplay = true
+
+[node name="ForMillionsAmbience" type="AudioStreamPlayer2D" parent="." unique_id=1194563638]
+position = Vector2(789, 173)
+stream = ExtResource("8_pt6jv")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/return" to="VBoxContainer/return" method="_on_return_pressed"]
