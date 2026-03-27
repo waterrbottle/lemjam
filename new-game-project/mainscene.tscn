@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bvgn2ofcb603x"]
 
 [ext_resource type="Script" uid="uid://bn1gpbfo3exqu" path="res://mainscene.gd" id="1_wtdyi"]
+[ext_resource type="Texture2D" uid="uid://bfdlk6yjmqicp" path="res://assets/MAIN.png" id="2_1cnxy"]
 [ext_resource type="Script" uid="uid://6d4qayarg1c7" path="res://reactor.gd" id="2_xtb1e"]
 [ext_resource type="FontFile" uid="uid://c2l07f2mmfm3h" path="res://assets/fonts/cyberpunk_is_not_dead/CIND.otf" id="3_0lhry"]
 [ext_resource type="Texture2D" uid="uid://cddqohxgg6x1r" path="res://assets/IMG_1036.PNG" id="3_5lfti"]
@@ -10,13 +11,346 @@
 [ext_resource type="Texture2D" uid="uid://61r0mwwkhmue" path="res://assets/IMG_1044.PNG" id="6_1ftms"]
 [ext_resource type="Texture2D" uid="uid://gun3juvdlc4d" path="res://assets/IMG_1041.PNG" id="6_fl65m"]
 [ext_resource type="Texture2D" uid="uid://in75ctp5wnbx" path="res://assets/IMG_1046.PNG" id="8_8bn17"]
+[ext_resource type="Texture2D" uid="uid://dp5lppk6vdrvx" path="res://assets/IMG_2884.png" id="8_xkysf"]
 [ext_resource type="Script" uid="uid://baxtpvma1ylsr" path="res://screws.gd" id="11_4ofsq"]
+[ext_resource type="Texture2D" uid="uid://dpkiss1sm2wo7" path="res://assets/IMG_1619.png" id="12_3ek7m"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="12_4p23x"]
 [ext_resource type="Texture2D" uid="uid://dsqoy1fm6mnv2" path="res://assets/IMG_1617.png" id="12_j8b8d"]
 [ext_resource type="Texture2D" uid="uid://rx7fd2j3ypjs" path="res://IMG_3406.png" id="12_jtreq"]
+[ext_resource type="Script" uid="uid://c1ngxlewhd51i" path="res://cables.gd" id="14_j8b8d"]
+[ext_resource type="Script" uid="uid://d1okw6rhai03w" path="res://slider.gd" id="15_lc52x"]
+[ext_resource type="Texture2D" uid="uid://ttw8rojcngl7" path="res://assets/17746189479366682.png" id="16_x1mr1"]
+[ext_resource type="Texture2D" uid="uid://wmbpujqxr41x" path="res://assets/Grafika_bez_nazwye.png" id="17_8gyya"]
+[ext_resource type="Texture2D" uid="uid://b4axxgnqrrryt" path="res://assets/kable minigame/kabelstretch1.png" id="17_iwfn6"]
+[ext_resource type="Texture2D" uid="uid://6lp3ck588ghp" path="res://assets/Tlo_memory_buttons.PNG" id="17_sm3u2"]
+[ext_resource type="Texture2D" uid="uid://cc0ktpht4mo8m" path="res://assets/kable minigame/kable_tlo.png" id="17_sya50"]
+[ext_resource type="Script" uid="uid://cd626o5tkcunl" path="res://code.gd" id="18_8gyya"]
+[ext_resource type="Texture2D" uid="uid://budsnncfd7meo" path="res://assets/kable minigame/kabelstretch2.png" id="18_8s8ki"]
+[ext_resource type="Texture2D" uid="uid://clp8lkfk66tif" path="res://assets/kable minigame/kabelstretch3.png" id="19_e2pok"]
+[ext_resource type="Texture2D" uid="uid://cvjyhvgvo3ect" path="res://assets/tlo wpisywanie cyfr.png" id="20_5sl4u"]
+[ext_resource type="Texture2D" uid="uid://c3b186ajbvlck" path="res://assets/kable minigame/kabelstretch4.png" id="21_5gj1e"]
+[ext_resource type="Texture2D" uid="uid://btnyth446e5ck" path="res://assets/kable minigame/kable-sciany.png" id="22_8jhwh"]
+[ext_resource type="Texture2D" uid="uid://bbsdsiqp15e8u" path="res://assets/2.png" id="23_5of3b"]
+[ext_resource type="Texture2D" uid="uid://boivw105ik7t" path="res://assets/kable minigame/kable_wtyczka4.png" id="23_03120"]
+[ext_resource type="Texture2D" uid="uid://dmp2a6tk15mvr" path="res://assets/IMG_2887.png" id="23_dgcol"]
+[ext_resource type="Texture2D" uid="uid://b4e722bb6dvks" path="res://assets/IMG_2881.png" id="24_5of3b"]
+[ext_resource type="Texture2D" uid="uid://cgen68x21syi3" path="res://assets/kable minigame/kable_wtyczka2.png" id="24_iwoyl"]
+[ext_resource type="Texture2D" uid="uid://d0qgrrjpf7s4y" path="res://assets/kable minigame/kable_gniazdo1.png" id="24_xs15d"]
+[ext_resource type="Texture2D" uid="uid://dxoc36hqmx8rh" path="res://assets/kable minigame/kable_gniazdo2.png" id="25_4olqe"]
+[ext_resource type="Texture2D" uid="uid://ba3v284xvnyov" path="res://assets/IMG_2880.png" id="25_7b6ne"]
+[ext_resource type="Texture2D" uid="uid://clq3ytq1j7gig" path="res://assets/kable minigame/kable_wtyczka3.png" id="25_ocswj"]
+[ext_resource type="Texture2D" uid="uid://c2x4bc47i2wfc" path="res://assets/IMG_2888.png" id="26_iwfn6"]
+[ext_resource type="Texture2D" uid="uid://dpdd1q3m17mhd" path="res://assets/kable minigame/kable_wtyczka1.png" id="26_j64eu"]
+[ext_resource type="Texture2D" uid="uid://ci0m4ojcvn37y" path="res://assets/IMG_2882.png" id="27_8s8ki"]
+[ext_resource type="Texture2D" uid="uid://dsj2q7clr3aac" path="res://assets/kable minigame/kable_gniazdo3.png" id="27_56ibc"]
+[ext_resource type="Texture2D" uid="uid://cf3cmvpmx6fcm" path="res://assets/IMG_2885.png" id="28_e2pok"]
+[ext_resource type="Texture2D" uid="uid://own83a2deois" path="res://assets/kable minigame/kable_gniazdo4.png" id="28_pgq4v"]
+[ext_resource type="Texture2D" uid="uid://ifsch2kmbbi" path="res://assets/IMG_2889.png" id="29_sya50"]
+[ext_resource type="Texture2D" uid="uid://ccybypwj3outs" path="res://assets/IMG_2883.png" id="30_5gj1e"]
+[ext_resource type="Texture2D" uid="uid://502uc7npdm11" path="res://assets/IMG_2886.png" id="31_8jhwh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwoyl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ocswj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j64eu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hev8t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g5l6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x351s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hv5bq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmcfg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yxo5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knrxo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vnnl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jo5x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utbtm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tqfu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqh86"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5ygy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0jif"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohyyk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jj0m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_thr7w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6e25o"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8xj5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fg3di"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_laoi3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yy1qe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nn0u8"]
-bg_color = Color(0.14, 0.14, 0.14, 1)
+bg_color = Color(0.07, 0.07, 0.07, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_76yo1"]
 texture = ExtResource("4_fl65m")
@@ -103,6 +437,142 @@ _data = {
 &"fall": SubResource("Animation_j8b8d")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8b8d"]
+radius = 52.419544
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_3ek7m"]
+thickness = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1cnxy"]
+texture = ExtResource("23_dgcol")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xs15d"]
+texture = ExtResource("23_dgcol")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4olqe"]
+texture = ExtResource("23_dgcol")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03120"]
+texture = ExtResource("23_dgcol")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56ibc"]
+texture = ExtResource("24_5of3b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pgq4v"]
+texture = ExtResource("24_5of3b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iwoyl"]
+texture = ExtResource("24_5of3b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ocswj"]
+texture = ExtResource("24_5of3b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j64eu"]
+texture = ExtResource("25_7b6ne")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hev8t"]
+texture = ExtResource("25_7b6ne")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1g5l6"]
+texture = ExtResource("25_7b6ne")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x351s"]
+texture = ExtResource("25_7b6ne")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hv5bq"]
+texture = ExtResource("26_iwfn6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmcfg"]
+texture = ExtResource("26_iwfn6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4yxo5"]
+texture = ExtResource("26_iwfn6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knrxo"]
+texture = ExtResource("26_iwfn6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vnnl"]
+texture = ExtResource("27_8s8ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5jo5x"]
+texture = ExtResource("27_8s8ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_utbtm"]
+texture = ExtResource("27_8s8ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4tqfu"]
+texture = ExtResource("27_8s8ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqh86"]
+texture = ExtResource("28_e2pok")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5ygy"]
+texture = ExtResource("28_e2pok")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e0jif"]
+texture = ExtResource("28_e2pok")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohyyk"]
+texture = ExtResource("28_e2pok")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3jj0m"]
+texture = ExtResource("29_sya50")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_thr7w"]
+texture = ExtResource("29_sya50")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6e25o"]
+texture = ExtResource("29_sya50")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j8xj5"]
+texture = ExtResource("29_sya50")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fg3di"]
+texture = ExtResource("30_5gj1e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_laoi3"]
+texture = ExtResource("30_5gj1e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yy1qe"]
+texture = ExtResource("30_5gj1e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdats"]
+texture = ExtResource("30_5gj1e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d76yy"]
+texture = ExtResource("31_8jhwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2txn"]
+texture = ExtResource("31_8jhwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jtrsa"]
+texture = ExtResource("31_8jhwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42aln"]
+texture = ExtResource("31_8jhwh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qkc3m"]
+texture = ExtResource("8_xkysf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yr7vl"]
+texture = ExtResource("8_xkysf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3wkv4"]
+texture = ExtResource("8_xkysf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g04ub"]
+texture = ExtResource("8_xkysf")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7b6ne"]
+font = ExtResource("3_0lhry")
+font_size = 32
+font_color = Color(0.18, 0.117, 0.054000005, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwfn6"]
+font = ExtResource("3_0lhry")
+font_size = 86
+font_color = Color(0, 0.1099999, 0.6, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_wtdyi"]
 font = ExtResource("3_0lhry")
 font_size = 27
@@ -110,6 +580,8 @@ font_size = 27
 [sub_resource type="LabelSettings" id="LabelSettings_0lhry"]
 font = ExtResource("3_0lhry")
 font_size = 48
+outline_size = 22
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_0ibrq"]
 length = 0.001
@@ -122,7 +594,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-760, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-1000, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -191,7 +663,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-760, -0.25, 0, 0.25, 0, 278, -0.16666667, -173, 0, 0, 278, -0.07388889, 0, 0, 0),
+"points": PackedFloat32Array(-953.8, -0.25, 0, 0.25, 0, 0, -0.16666667, -173, 0, 0, 0, -0.07388889, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.36666667, 1.5333333)
 }
 tracks/1/type = "bezier"
@@ -338,26 +810,92 @@ _data = {
 &"eloback": SubResource("Animation_5lfti")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdats"]
+bg_color = Color(1, 0.90000004, 0, 1)
+border_width_bottom = 17
+border_color = Color(1, 0.9825, 0.79, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
 [node name="Mainscene" type="Node2D" unique_id=1416502856]
 script = ExtResource("1_wtdyi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=378482081]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=620962173]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1cnxy")
+expand_mode = 1
 
 [node name="buttons" type="Node2D" parent="." unique_id=1620099738]
 
 [node name="reactor" type="Button" parent="buttons" unique_id=1954804365]
-offset_left = 122.0
-offset_top = 293.0
-offset_right = 228.0
-offset_bottom = 394.0
-text = "pattern quest"
+offset_left = 496.0
+offset_top = 499.0
+offset_right = 657.0
+offset_bottom = 590.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_iwoyl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ocswj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j64eu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hev8t")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1g5l6")
 
-[node name="reactor2" type="Button" parent="buttons" unique_id=279493771]
-offset_left = 320.0
-offset_top = 320.0
-offset_right = 434.0
-offset_bottom = 421.0
-text = "screw quest"
+[node name="screw" type="Button" parent="buttons" unique_id=279493771]
+offset_left = 768.1653
+offset_top = 557.37146
+offset_right = 901.8009
+offset_bottom = 645.0734
+rotation = -0.863938
+theme_override_styles/normal = SubResource("StyleBoxFlat_x351s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hv5bq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lmcfg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4yxo5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_knrxo")
+
+[node name="cables" type="Button" parent="buttons" unique_id=1426395496]
+offset_left = 291.59906
+offset_top = 457.1714
+offset_right = 428.69568
+offset_bottom = 546.3751
+rotation = 0.86219263
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vnnl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5jo5x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_utbtm")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4tqfu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wqh86")
+
+[node name="sliders" type="Button" parent="buttons" unique_id=1776463015]
+offset_left = 529.0
+offset_top = 155.0
+offset_right = 623.0
+offset_bottom = 225.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_m5ygy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e0jif")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohyyk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3jj0m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_thr7w")
+
+[node name="codes" type="Button" parent="buttons" unique_id=312490501]
+offset_left = 499.0
+offset_top = 333.0
+offset_right = 659.0
+offset_bottom = 427.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6e25o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j8xj5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fg3di")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_laoi3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yy1qe")
 
 [node name="quests" type="Node2D" parent="." unique_id=1563291383]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="quests" unique_id=1283223873]
 
@@ -381,6 +919,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_xtb1e")
+
+[node name="ColorRect" type="TextureRect" parent="quests/CanvasLayer/allquests/reactor" unique_id=1139307766]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_sm3u2")
+expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="quests/CanvasLayer/allquests/reactor" unique_id=783126428]
 layout_mode = 1
@@ -780,6 +1328,18 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("12_4p23x")
 
+[node name="TextureRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/screws" unique_id=404065778]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.999512
+offset_right = 26.999512
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_3ek7m")
+expand_mode = 1
+
 [node name="panel" type="TextureRect" parent="quests/CanvasLayer/allquests/screws" unique_id=1100322999]
 layout_mode = 1
 anchors_preset = 8
@@ -890,6 +1450,234 @@ libraries/ = SubResource("AnimationLibrary_lc52x")
 one_shot = true
 
 [node name="cables" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1442365101]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_j8b8d")
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/cables" unique_id=237543561]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_sya50")
+expand_mode = 1
+
+[node name="lines" type="Node2D" parent="quests/CanvasLayer/allquests/cables" unique_id=1111894968]
+
+[node name="Line2D" type="Line2D" parent="quests/CanvasLayer/allquests/cables/lines" unique_id=1490144702]
+position = Vector2(99, 23.999992)
+scale = Vector2(1.3469387, 1.2346938)
+points = PackedVector2Array(0, 200, 200, 200)
+width = 20.0
+texture = ExtResource("17_iwfn6")
+texture_mode = 2
+
+[node name="Line2D2" type="Line2D" parent="quests/CanvasLayer/allquests/cables/lines" unique_id=774140418]
+position = Vector2(99, 100.04)
+scale = Vector2(1.3469387, 1.2346938)
+points = PackedVector2Array(0, 220, 200, 220)
+width = 20.0
+texture = ExtResource("18_8s8ki")
+texture_mode = 2
+
+[node name="Line2D3" type="Line2D" parent="quests/CanvasLayer/allquests/cables/lines" unique_id=60814337]
+position = Vector2(99, 182.76)
+scale = Vector2(1.3469387, 1.2346938)
+points = PackedVector2Array(-35.636353, 188.90514, 724.6061, 188.90514)
+width = 20.0
+texture = ExtResource("19_e2pok")
+texture_mode = 2
+
+[node name="Line2D4" type="Line2D" parent="quests/CanvasLayer/allquests/cables/lines" unique_id=1471806649]
+modulate = Color(0, 0.7166667, 1, 1)
+position = Vector2(99, 250)
+scale = Vector2(1.3469387, 1.2346938)
+points = PackedVector2Array(-35.636353, 196.84232, 338.54544, 199.23967)
+width = 20.0
+texture = ExtResource("21_5gj1e")
+texture_mode = 2
+
+[node name="plugs" type="Node2D" parent="quests/CanvasLayer/allquests/cables" unique_id=1182829220]
+
+[node name="b1" type="Button" parent="quests/CanvasLayer/allquests/cables/plugs" unique_id=1308752815]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 148.18
+offset_bottom = 50.0
+flat = true
+
+[node name="area1" type="Area2D" parent="quests/CanvasLayer/allquests/cables/plugs/b1" unique_id=691413093]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quests/CanvasLayer/allquests/cables/plugs/b1/area1" unique_id=1510337041]
+position = Vector2(24, 24)
+shape = SubResource("CircleShape2D_j8b8d")
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/cables/plugs/b1" unique_id=740350625]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 184.20438
+offset_bottom = 58.0
+texture = ExtResource("23_03120")
+expand_mode = 1
+
+[node name="b2" type="Button" parent="quests/CanvasLayer/allquests/cables/plugs" unique_id=1287747175]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 148.18
+offset_bottom = 50.0
+flat = true
+
+[node name="area2" type="Area2D" parent="quests/CanvasLayer/allquests/cables/plugs/b2" unique_id=720214415]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quests/CanvasLayer/allquests/cables/plugs/b2/area2" unique_id=2103563156]
+position = Vector2(24, 24)
+shape = SubResource("CircleShape2D_j8b8d")
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/cables/plugs/b2" unique_id=1907195738]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 184.20438
+offset_bottom = 58.0
+texture = ExtResource("24_iwoyl")
+expand_mode = 1
+
+[node name="b3" type="Button" parent="quests/CanvasLayer/allquests/cables/plugs" unique_id=1130852376]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 148.18
+offset_bottom = 50.0
+flat = true
+
+[node name="area3" type="Area2D" parent="quests/CanvasLayer/allquests/cables/plugs/b3" unique_id=868524777]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quests/CanvasLayer/allquests/cables/plugs/b3/area3" unique_id=390949620]
+position = Vector2(24, 24)
+shape = SubResource("CircleShape2D_j8b8d")
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/cables/plugs/b3" unique_id=1108245873]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 184.20438
+offset_bottom = 58.0
+texture = ExtResource("25_ocswj")
+expand_mode = 1
+
+[node name="b4" type="Button" parent="quests/CanvasLayer/allquests/cables/plugs" unique_id=1693524555]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 148.18
+offset_bottom = 50.0
+flat = true
+
+[node name="area4" type="Area2D" parent="quests/CanvasLayer/allquests/cables/plugs/b4" unique_id=662169073]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quests/CanvasLayer/allquests/cables/plugs/b4/area4" unique_id=853930068]
+position = Vector2(24, 24)
+shape = SubResource("CircleShape2D_j8b8d")
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/cables/plugs/b4" unique_id=1700882443]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 184.20438
+offset_bottom = 58.0
+texture = ExtResource("26_j64eu")
+expand_mode = 1
+
+[node name="Timer" type="Timer" parent="quests/CanvasLayer/allquests/cables" unique_id=580582064]
+wait_time = 0.1
+one_shot = true
+
+[node name="TextureRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/cables" unique_id=872279255]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("22_8jhwh")
+expand_mode = 1
+
+[node name="sokcets" type="Node2D" parent="quests/CanvasLayer/allquests/cables" unique_id=1464309541]
+
+[node name="ColorRect" type="TextureRect" parent="quests/CanvasLayer/allquests/cables/sokcets" unique_id=201002036]
+offset_left = 1041.0
+offset_top = 9.82
+offset_right = 1066.0
+offset_bottom = 154.68301
+texture = ExtResource("24_xs15d")
+expand_mode = 1
+
+[node name="sokcet1" type="Area2D" parent="quests/CanvasLayer/allquests/cables/sokcets/ColorRect" unique_id=1144512250]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quests/CanvasLayer/allquests/cables/sokcets/ColorRect/sokcet1" unique_id=1282498416]
+position = Vector2(-40, 64.18)
+shape = SubResource("CircleShape2D_j8b8d")
+
+[node name="ColorRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/cables/sokcets" unique_id=1391460907]
+offset_left = 1040.0
+offset_top = 165.0
+offset_right = 1065.0
+offset_bottom = 309.86316
+texture = ExtResource("25_4olqe")
+expand_mode = 1
+
+[node name="sokcet2" type="Area2D" parent="quests/CanvasLayer/allquests/cables/sokcets/ColorRect2" unique_id=1458710450]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quests/CanvasLayer/allquests/cables/sokcets/ColorRect2/sokcet2" unique_id=199366756]
+position = Vector2(-40, 64)
+shape = SubResource("CircleShape2D_j8b8d")
+
+[node name="ColorRect3" type="TextureRect" parent="quests/CanvasLayer/allquests/cables/sokcets" unique_id=612024179]
+offset_left = 1040.0
+offset_top = 316.0
+offset_right = 1067.0
+offset_bottom = 472.45203
+texture = ExtResource("27_56ibc")
+expand_mode = 1
+
+[node name="sokcet2" type="Area2D" parent="quests/CanvasLayer/allquests/cables/sokcets/ColorRect3" unique_id=1883135736]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quests/CanvasLayer/allquests/cables/sokcets/ColorRect3/sokcet2" unique_id=285656785]
+position = Vector2(-40, 75)
+shape = SubResource("CircleShape2D_j8b8d")
+
+[node name="ColorRect4" type="TextureRect" parent="quests/CanvasLayer/allquests/cables/sokcets" unique_id=18577945]
+offset_left = 1038.0
+offset_top = 478.0
+offset_right = 1065.0
+offset_bottom = 634.452
+texture = ExtResource("28_pgq4v")
+expand_mode = 1
+
+[node name="sokcet2" type="Area2D" parent="quests/CanvasLayer/allquests/cables/sokcets/ColorRect4" unique_id=1513524872]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quests/CanvasLayer/allquests/cables/sokcets/ColorRect4/sokcet2" unique_id=1208100582]
+position = Vector2(-40, 64)
+shape = SubResource("CircleShape2D_j8b8d")
+
+[node name="ProgressBar" type="ProgressBar" parent="quests/CanvasLayer/allquests/cables" unique_id=716705176]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_4p23x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jtreq")
+max_value = 6.0
+value = 4.0
+show_percentage = false
+
+[node name="starttimer" type="Timer" parent="quests/CanvasLayer/allquests/cables" unique_id=1357528537]
+wait_time = 0.1
+one_shot = true
+
+[node name="slider" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1043773421]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -897,14 +1685,406 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("15_lc52x")
 
-[node name="Line2D" type="Line2D" parent="quests/CanvasLayer/allquests/cables" unique_id=1490144702]
-position = Vector2(-48, -96)
-scale = Vector2(1.3469387, 1.2346938)
-points = PackedVector2Array(120, 40, 216, 136, 200, 184, 136, 216, 80, 208, -47.515156, 259.17355, -53.454548, 51.83471)
-width = 43.29
-texture = ExtResource("6_fl65m")
-texture_mode = 2
+[node name="TextureRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/slider" unique_id=1979899250]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_sm3u2")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/slider" unique_id=267656069]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.12482
+offset_top = -261.31107
+offset_right = 247.12482
+offset_bottom = 261.31107
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_8bn17")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="quests/CanvasLayer/allquests/slider" unique_id=1158768054]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.00024
+offset_top = -148.0
+offset_right = 181.00024
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSlider" type="HSlider" parent="quests/CanvasLayer/allquests/slider/VBoxContainer" unique_id=34338541]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("16_x1mr1")
+theme_override_icons/grabber_highlight = ExtResource("16_x1mr1")
+theme_override_icons/grabber_disabled = ExtResource("16_x1mr1")
+theme_override_styles/slider = SubResource("StyleBoxLine_3ek7m")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_3ek7m")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_3ek7m")
+max_value = 10.0
+step = 0.5
+value = 5.0
+
+[node name="vis1" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider" unique_id=1632373626]
+unique_name_in_owner = true
+modulate = Color(0.1333332, 1, 0, 0.30980393)
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("16_x1mr1")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="vis1e" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider" unique_id=1472915832]
+unique_name_in_owner = true
+modulate = Color(0.6166668, 0, 1, 0.34117648)
+layout_mode = 0
+offset_left = -60.0
+offset_right = -60.0
+mouse_filter = 2
+texture = ExtResource("16_x1mr1")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="HSlider2" type="HSlider" parent="quests/CanvasLayer/allquests/slider/VBoxContainer" unique_id=1399551505]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("16_x1mr1")
+theme_override_icons/grabber_highlight = ExtResource("16_x1mr1")
+theme_override_icons/grabber_disabled = ExtResource("16_x1mr1")
+theme_override_styles/slider = SubResource("StyleBoxLine_3ek7m")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_3ek7m")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_3ek7m")
+max_value = 10.0
+step = 0.5
+value = 5.0
+
+[node name="vis2" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider2" unique_id=1080493114]
+unique_name_in_owner = true
+modulate = Color(0.13333334, 1, 0, 0.30980393)
+layout_mode = 0
+offset_left = -8.0
+offset_right = -8.0
+mouse_filter = 2
+texture = ExtResource("16_x1mr1")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="vis2e" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider2" unique_id=1914468812]
+unique_name_in_owner = true
+modulate = Color(0.6156863, 0, 1, 0.34117648)
+layout_mode = 0
+offset_left = -8.0
+offset_right = -8.0
+mouse_filter = 2
+texture = ExtResource("16_x1mr1")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="HSlider3" type="HSlider" parent="quests/CanvasLayer/allquests/slider/VBoxContainer" unique_id=1951702336]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("16_x1mr1")
+theme_override_icons/grabber_highlight = ExtResource("16_x1mr1")
+theme_override_icons/grabber_disabled = ExtResource("16_x1mr1")
+theme_override_styles/slider = SubResource("StyleBoxLine_3ek7m")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_3ek7m")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_3ek7m")
+max_value = 10.0
+step = 0.5
+value = 5.0
+
+[node name="vis3" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider3" unique_id=276146593]
+unique_name_in_owner = true
+modulate = Color(0.13333334, 1, 0, 0.30980393)
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("16_x1mr1")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="vis3e" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider3" unique_id=2024121058]
+unique_name_in_owner = true
+modulate = Color(0.6156863, 0, 1, 0.34117648)
+layout_mode = 0
+offset_left = -8.0
+offset_right = -8.0
+mouse_filter = 2
+texture = ExtResource("16_x1mr1")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="quests/CanvasLayer/allquests/slider" unique_id=2147154222]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.00024
+offset_top = -124.0
+offset_right = 237.00024
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer2" unique_id=2112049965]
+custom_minimum_size = Vector2(100, 49.61)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("17_8gyya")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer2" unique_id=1141909977]
+custom_minimum_size = Vector2(100, 49.61)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("17_8gyya")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="quests/CanvasLayer/allquests/slider/VBoxContainer2" unique_id=919264717]
+custom_minimum_size = Vector2(100, 49.61)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("17_8gyya")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="quests/CanvasLayer/allquests/slider" unique_id=1188084007]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="quests/CanvasLayer/allquests/slider" unique_id=703147371]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_4p23x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jtreq")
+max_value = 3.0
+value = 3.0
+show_percentage = false
+
+[node name="codes" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1320672957]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("18_8gyya")
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/codes" unique_id=401999398]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_5sl4u")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="quests/CanvasLayer/allquests/codes" unique_id=60960768]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 163.0
+offset_top = 72.0
+offset_right = -163.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_5of3b")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Control" type="Control" parent="quests/CanvasLayer/allquests/codes" unique_id=60073015]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 164.0
+offset_right = 20.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="reactorbuttons" type="GridContainer" parent="quests/CanvasLayer/allquests/codes/Control" unique_id=233597584]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.96028
+offset_top = -119.99997
+offset_right = 376.03973
+offset_bottom = 120.31247
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.48, 0.48)
+theme_override_constants/h_separation = 19
+theme_override_constants/v_separation = 17
+columns = 3
+
+[node name="1" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=2069712231]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_1cnxy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xs15d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4olqe")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_03120")
+
+[node name="2" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=1203301111]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_56ibc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pgq4v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iwoyl")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ocswj")
+
+[node name="3" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=1447587495]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_j64eu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hev8t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1g5l6")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_x351s")
+
+[node name="4" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=802201005]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_hv5bq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lmcfg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4yxo5")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_knrxo")
+
+[node name="5" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=1633455956]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_7vnnl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5jo5x")
+theme_override_styles/hover = SubResource("StyleBoxTexture_utbtm")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_4tqfu")
+
+[node name="6" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=1131514581]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_wqh86")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m5ygy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e0jif")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ohyyk")
+
+[node name="7" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=1241523156]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_3jj0m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_thr7w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6e25o")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_j8xj5")
+
+[node name="8" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=1642565207]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_fg3di")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_laoi3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yy1qe")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fdats")
+
+[node name="9" type="Button" parent="quests/CanvasLayer/allquests/codes/Control/reactorbuttons" unique_id=451654445]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_d76yy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o2txn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jtrsa")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_42aln")
+
+[node name="b0" type="Button" parent="quests/CanvasLayer/allquests/codes/Control" unique_id=1051335574]
+custom_minimum_size = Vector2(150, 65)
+layout_mode = 0
+offset_left = -22.000244
+offset_top = 12.0
+offset_right = 127.999756
+offset_bottom = 77.0
+scale = Vector2(0.45, 0.45)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qkc3m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yr7vl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3wkv4")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_g04ub")
+
+[node name="Label" type="Label" parent="quests/CanvasLayer/allquests/codes" unique_id=1808290154]
+layout_mode = 0
+offset_left = 771.0
+offset_top = 215.0
+offset_right = 879.0
+offset_bottom = 247.0
+rotation = 0.28797933
+text = "123456"
+label_settings = SubResource("LabelSettings_7b6ne")
+
+[node name="Label2" type="Label" parent="quests/CanvasLayer/allquests/codes" unique_id=267895692]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.00024
+offset_top = -155.0
+offset_right = 159.99976
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "123456"
+label_settings = SubResource("LabelSettings_iwfn6")
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="quests/CanvasLayer/allquests/codes" unique_id=1246423218]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_4p23x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jtreq")
+max_value = 4.0
+value = 4.0
+show_percentage = false
 
 [node name="always_shown" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1441021090]
 layout_mode = 1
@@ -921,10 +2101,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -197.5
-offset_top = 20.0
-offset_right = 197.5
-offset_bottom = 58.0
+offset_left = -197.00024
+offset_top = 32.0
+offset_right = 197.99976
+offset_bottom = 70.0
 grow_horizontal = 2
 text = "cos tam jakias minigra"
 label_settings = SubResource("LabelSettings_wtdyi")
@@ -938,15 +2118,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1336.0002
+offset_left = -1576.0002
 offset_top = -29.0
-offset_right = -734.9988
+offset_right = -440.00024
 offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(300, 0)
 text = "zadanie wykonane!"
 label_settings = SubResource("LabelSettings_0lhry")
+horizontal_alignment = 1
 
 [node name="minigamedone" type="AnimationPlayer" parent="quests/CanvasLayer/allquests" unique_id=582192880]
 unique_name_in_owner = true
@@ -958,10 +2139,51 @@ autoplay = &"RESET"
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_sbvtr")
 
+[node name="Control2" type="Control" parent="quests/CanvasLayer/allquests" unique_id=256744462]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="." unique_id=1945576641]
+visible = false
+offset_left = 555.0
+offset_top = 249.0
+offset_right = 598.0
+offset_bottom = 291.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fdats")
+
+[node name="wingame" type="Button" parent="Panel" unique_id=1101467470]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_right = 45.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("3_0lhry")
+text = "ok?"
+flat = true
+
 [connection signal="pressed" from="buttons/reactor" to="." method="_on_reactor_pressed"]
-[connection signal="pressed" from="buttons/reactor2" to="." method="_on_reactor_2_pressed"]
+[connection signal="pressed" from="buttons/screw" to="." method="_on_reactor_2_pressed"]
+[connection signal="pressed" from="buttons/cables" to="." method="_on_cables_pressed"]
+[connection signal="pressed" from="buttons/sliders" to="." method="_on_sliders_pressed"]
+[connection signal="pressed" from="buttons/codes" to="." method="_on_codes_pressed"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/Timer" to="quests/CanvasLayer/allquests/reactor" method="_on_timer_timeout"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/resettimer" to="quests/CanvasLayer/allquests/reactor" method="_on_resettimer_timeout"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/timerblank" to="quests/CanvasLayer/allquests/reactor" method="_on_timerblank_timeout"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/screws/Timer" to="quests/CanvasLayer/allquests/screws" method="_on_timer_timeout"]
+[connection signal="button_down" from="quests/CanvasLayer/allquests/cables/plugs/b1" to="quests/CanvasLayer/allquests/cables" method="_on_b_1_button_down"]
+[connection signal="area_entered" from="quests/CanvasLayer/allquests/cables/plugs/b1/area1" to="quests/CanvasLayer/allquests/cables" method="_on_area_1_area_entered"]
+[connection signal="button_down" from="quests/CanvasLayer/allquests/cables/plugs/b2" to="quests/CanvasLayer/allquests/cables" method="_on_b_2_button_down"]
+[connection signal="area_entered" from="quests/CanvasLayer/allquests/cables/plugs/b2/area2" to="quests/CanvasLayer/allquests/cables" method="_on_area_2_area_entered"]
+[connection signal="button_down" from="quests/CanvasLayer/allquests/cables/plugs/b3" to="quests/CanvasLayer/allquests/cables" method="_on_b_3_button_down"]
+[connection signal="area_entered" from="quests/CanvasLayer/allquests/cables/plugs/b3/area3" to="quests/CanvasLayer/allquests/cables" method="_on_area_3_area_entered"]
+[connection signal="button_down" from="quests/CanvasLayer/allquests/cables/plugs/b4" to="quests/CanvasLayer/allquests/cables" method="_on_b_4_button_down"]
+[connection signal="area_entered" from="quests/CanvasLayer/allquests/cables/plugs/b4/area4" to="quests/CanvasLayer/allquests/cables" method="_on_area_4_area_entered"]
+[connection signal="timeout" from="quests/CanvasLayer/allquests/cables/Timer" to="quests/CanvasLayer/allquests/cables" method="_on_timer_timeout"]
+[connection signal="timeout" from="quests/CanvasLayer/allquests/cables/starttimer" to="quests/CanvasLayer/allquests/cables" method="_on_starttimer_timeout"]
+[connection signal="value_changed" from="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider" to="quests/CanvasLayer/allquests/slider" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider2" to="quests/CanvasLayer/allquests/slider" method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider3" to="quests/CanvasLayer/allquests/slider" method="_on_h_slider_3_value_changed"]
+[connection signal="pressed" from="quests/CanvasLayer/allquests/codes/Control/b0" to="quests/CanvasLayer/allquests/codes" method="_on_b_0_pressed"]
 [connection signal="animation_finished" from="quests/CanvasLayer/allquests/minigamedone" to="quests/CanvasLayer/allquests/reactor" method="_on_minigamedone_animation_finished"]
+[connection signal="pressed" from="Panel/wingame" to="." method="_on_wingame_pressed"]

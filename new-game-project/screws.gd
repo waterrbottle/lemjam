@@ -11,6 +11,7 @@ func _ready() -> void:
 		n.connect("button_down", btnpressed.bind(n))
 		n.rotation_degrees = states[n.get_index()] * 90
 func start():
+	$AnimationPlayer.play("RESET")
 	states = [5,5,5,5]
 	print(states)
 	for n in $panel.get_children():
@@ -31,17 +32,20 @@ func _process(delta: float) -> void:
 		if states == [2.0,2.0,2.0,2.0]:
 			%winmessage.text = "zadanie wykonane!"
 			%winmessage.modulate = Color(0.0, 1.0, 0.017, 1.0)
-			
+			get_tree().current_scene.donegames[1] = 0
 			get_tree().current_scene.done += 1
+			running = false
+			%minigamedone.play("new_animation")
+			
+		if states == [8.0,8.0,8.0,8.0]:
+			get_tree().current_scene.donegames[1] = 1
+			%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
+			%winmessage.text = "zadanie zsabotowane"
+			#%minigamedone.play("new_animation")
+			get_tree().current_scene.sabotaged += 1
 			running = false
 			$Timer.start()
 			$AnimationPlayer.play("fall")
-		if states == [8.0,8.0,8.0,8.0]:
-			%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
-			%winmessage.text = "zadanie zsabotowane"
-			%minigamedone.play("new_animation")
-			get_tree().current_scene.sabotaged += 1
-			running = false
 		if timer < 0:
 			%winmessage.modulate = Color(1.0, 0.0, 0.0, 1.0)
 			%winmessage.text = "zadanie nieudane"

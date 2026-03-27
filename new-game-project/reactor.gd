@@ -82,10 +82,12 @@ func donefunction():
 		%winmessage.text = "zadanie wykonane!"
 		%winmessage.modulate = Color(0.0, 1.0, 0.017, 1.0)
 		get_tree().current_scene.done += 1
+		get_tree().current_scene.donegames[0] = 0
 	else:
 		%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
 		%winmessage.text = "zadanie zsabotowane"
 		get_tree().current_scene.sabotaged += 1
+		get_tree().current_scene.donegames[0] = 1
 	%minigamedone.play("new_animation")
 func bpressed(ind):
 	if lock == true:
