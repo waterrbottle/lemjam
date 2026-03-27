@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bn1gpbfo3exqu" path="res://mainscene.gd" id="1_wtdyi"]
 [ext_resource type="Texture2D" uid="uid://bfdlk6yjmqicp" path="res://assets/MAIN.png" id="2_1cnxy"]
+[ext_resource type="FontFile" uid="uid://28e2vuijk0sj" path="res://main menu/Lucznik1303Plus-z0aG.ttf" id="2_knrxo"]
 [ext_resource type="Script" uid="uid://6d4qayarg1c7" path="res://reactor.gd" id="2_xtb1e"]
 [ext_resource type="FontFile" uid="uid://c2l07f2mmfm3h" path="res://assets/fonts/cyberpunk_is_not_dead/CIND.otf" id="3_0lhry"]
 [ext_resource type="Texture2D" uid="uid://cddqohxgg6x1r" path="res://assets/IMG_1036.PNG" id="3_5lfti"]
+[ext_resource type="Texture2D" uid="uid://dpm2oex10t25j" path="res://assets/button.PNG" id="3_7vnnl"]
+[ext_resource type="Texture2D" uid="uid://4t0wvovfn0v3" path="res://assets/Buttonmenupressed.png" id="4_5jo5x"]
 [ext_resource type="Texture2D" uid="uid://db7ewkmkr8ja6" path="res://assets/IMG_1035.PNG" id="4_8bn17"]
 [ext_resource type="Texture2D" uid="uid://da3y8odu4fc7h" path="res://assets/IMG_1045.PNG" id="4_fl65m"]
 [ext_resource type="Texture2D" uid="uid://ucopc7iel8p3" path="res://assets/IMG_1037.PNG" id="4_sbvtr"]
+[ext_resource type="Script" uid="uid://b2epatnpqog33" path="res://from console cryo/return_to_cryu.gd" id="5_utbtm"]
 [ext_resource type="Texture2D" uid="uid://61r0mwwkhmue" path="res://assets/IMG_1044.PNG" id="6_1ftms"]
 [ext_resource type="Texture2D" uid="uid://gun3juvdlc4d" path="res://assets/IMG_1041.PNG" id="6_fl65m"]
 [ext_resource type="Texture2D" uid="uid://in75ctp5wnbx" path="res://assets/IMG_1046.PNG" id="8_8bn17"]
@@ -53,6 +57,15 @@
 [ext_resource type="Texture2D" uid="uid://502uc7npdm11" path="res://assets/IMG_2886.png" id="31_8jhwh"]
 [ext_resource type="AudioStream" uid="uid://bvu645vhtklwo" path="res://assets/sounds/SFX/AmbienceDoKabelków.wav" id="32_ocswj"]
 [ext_resource type="AudioStream" uid="uid://fs2eimgxphk3" path="res://assets/sounds/SFX/Suwak.wav" id="39_x351s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_si422"]
+texture = ExtResource("3_7vnnl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_km8ym"]
+texture = ExtResource("4_5jo5x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fgjwo"]
+texture = ExtResource("4_5jo5x")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwoyl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -827,6 +840,28 @@ corner_radius_bottom_left = 30
 
 [node name="Mainscene" type="Node2D" unique_id=1416502856]
 script = ExtResource("1_wtdyi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2008434605]
+offset_left = 480.0
+offset_top = 10.0
+offset_right = 680.0
+offset_bottom = 90.0
+
+[node name="return" type="Button" parent="VBoxContainer" unique_id=231058638]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_knrxo")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_si422")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_km8ym")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fgjwo")
+text = "załoga"
+script = ExtResource("5_utbtm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=378482081]
 layer = -1
@@ -2186,6 +2221,7 @@ theme_override_fonts/font = ExtResource("3_0lhry")
 text = "ok?"
 flat = true
 
+[connection signal="pressed" from="VBoxContainer/return" to="VBoxContainer/return" method="_on_return_pressed"]
 [connection signal="pressed" from="buttons/reactor" to="." method="_on_reactor_pressed"]
 [connection signal="pressed" from="buttons/screw" to="." method="_on_reactor_2_pressed"]
 [connection signal="pressed" from="buttons/cables" to="." method="_on_cables_pressed"]
