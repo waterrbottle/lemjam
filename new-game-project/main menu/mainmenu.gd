@@ -8,7 +8,7 @@ func _process(delta: float) -> void:
 func _on_start_pressed() -> void:
 	$clickaudio.play()
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file("uid://bm5jusu50mxim")
+	get_tree().change_scene_to_file("res://starts/start_gaem.tscn")
 
 func _on_authors_pressed() -> void:
 	$clickaudio.play()

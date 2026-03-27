@@ -59,6 +59,7 @@ func _process(delta: float) -> void:
 func unlock():
 	lock = false
 func btnpressed(node):
+	$"ŚrubaDokręcanie".play()
 	if lock == true:
 		return
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):

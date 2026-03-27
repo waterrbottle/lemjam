@@ -61,7 +61,8 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	
+	$AudioStreamPlayer.play()
+	$AudioStreamPlayer.pitch_scale = random[npass-1]
 	for n in %displaypanels.get_children():
 		if random[npass-1] == n.get_index()+1:
 			n.modulate = Color(1.0, 0.0, 0.0, 1.0)
@@ -90,12 +91,16 @@ func donefunction():
 		get_tree().current_scene.donegames[0] = 1
 	%minigamedone.play("new_animation")
 func bpressed(ind):
+
+	$AudioStreamPlayer.pitch_scale = ind + 1
+	$AudioStreamPlayer.play()
 	if lock == true:
 		return
 	btns.append(ind+1)
 
 	if random[btnsind] != btns[btnsind] and random[nmaster-btnsind-1] != btns[btnsind]:
 		lock=true
+		
 		for n in %displaypanels.get_children():
 			n.modulate = Color(1.0, 0.0, 0.017, 1.0)
 		$resettimer.start()

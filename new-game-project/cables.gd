@@ -11,6 +11,7 @@ var timer = 6
 func _ready() -> void:
 	pass
 func start():
+	$"AmbienceDoKabelków".play()
 	timer = 6
 	currentlypressed = -1
 	selected = [-1,-1,-1,-1]
@@ -63,7 +64,9 @@ func _process(delta: float) -> void:
 				running = false
 				%minigamedone.play("new_animation")
 				get_tree().current_scene.donegames[2] = 0
+				$"AmbienceDoKabelków".stop()
 			else:
+				$"AmbienceDoKabelków".stop()
 				running=false
 				get_tree().current_scene.donegames[2] = 1
 				%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
@@ -73,6 +76,7 @@ func _process(delta: float) -> void:
 				
 			o=false
 		if timer < 0:
+			$"AmbienceDoKabelków".stop()
 			%winmessage.modulate = Color(1.0, 0.0, 0.0, 1.0)
 			%winmessage.text = "zadanie nieudane"
 			%minigamedone.play("new_animation")
@@ -110,3 +114,7 @@ func snap(area):
 
 func _on_starttimer_timeout() -> void:
 	running=true
+
+
+func _on_ambience_do_kabelków_finished() -> void:
+	$"AmbienceDoKabelków".play()

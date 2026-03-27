@@ -8,7 +8,7 @@ func _process(delta: float) -> void:
 func _on_return_pressed() -> void:
 	# %clickaudio.play()
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file("uid://bieda8xsm0p2t")
+	get_tree().change_scene_to_file("res://starts/do_konsoli.tscn")
 
 
 func _on_audio_stream_player_finished() -> void:

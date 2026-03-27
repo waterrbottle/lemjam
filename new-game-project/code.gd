@@ -64,10 +64,14 @@ func _process(delta: float) -> void:
 		
 
 func bp(node):
+	
 	if running == true:
+		$KeypadNumerki.play()
+		$KeypadNumerki.pitch_scale = node.get_index()/ 2.0
 		code.append(node.get_index()+1)
 
 
 func _on_b_0_pressed() -> void:
 	if running == true:
+		$KeypadNumerki.play()
 		code.append(0)

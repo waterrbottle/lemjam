@@ -64,6 +64,7 @@ func _on_h_slider_3_value_changed(value: float) -> void:
 		good()
 	if done == [2,2,2]:
 		sabo()
+	$Suwak.play()
 
 func _on_h_slider_2_value_changed(value: float) -> void:
 	if value == values[1] * 1.0:
@@ -75,6 +76,7 @@ func _on_h_slider_2_value_changed(value: float) -> void:
 		good()
 	if done == [2,2,2]:
 		sabo()
+	$Suwak.play()
 
 func _on_h_slider_value_changed(value: float) -> void:
 	if value == values[0] * 1.0:
@@ -85,3 +87,4 @@ func _on_h_slider_value_changed(value: float) -> void:
 		good()
 	if done == [2,2,2]:
 		sabo()
+	$Suwak.play()

@@ -16,7 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://dpkiss1sm2wo7" path="res://assets/IMG_1619.png" id="12_3ek7m"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="12_4p23x"]
 [ext_resource type="Texture2D" uid="uid://dsqoy1fm6mnv2" path="res://assets/IMG_1617.png" id="12_j8b8d"]
+[ext_resource type="AudioStream" uid="uid://bag13go4jfph4" path="res://assets/sounds/SFX/KeypadKolejność.wav" id="12_j64eu"]
 [ext_resource type="Texture2D" uid="uid://rx7fd2j3ypjs" path="res://IMG_3406.png" id="12_jtreq"]
+[ext_resource type="AudioStream" uid="uid://b20oo5ei0otbe" path="res://assets/sounds/SFX/KeypadNumerki.wav" id="13_hev8t"]
 [ext_resource type="Script" uid="uid://c1ngxlewhd51i" path="res://cables.gd" id="14_j8b8d"]
 [ext_resource type="Script" uid="uid://d1okw6rhai03w" path="res://slider.gd" id="15_lc52x"]
 [ext_resource type="Texture2D" uid="uid://ttw8rojcngl7" path="res://assets/17746189479366682.png" id="16_x1mr1"]
@@ -26,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cc0ktpht4mo8m" path="res://assets/kable minigame/kable_tlo.png" id="17_sya50"]
 [ext_resource type="Script" uid="uid://cd626o5tkcunl" path="res://code.gd" id="18_8gyya"]
 [ext_resource type="Texture2D" uid="uid://budsnncfd7meo" path="res://assets/kable minigame/kabelstretch2.png" id="18_8s8ki"]
+[ext_resource type="AudioStream" uid="uid://dtfsepd0dikqv" path="res://assets/sounds/SFX/ŚrubaDokręcanie.wav" id="19_1g5l6"]
 [ext_resource type="Texture2D" uid="uid://clp8lkfk66tif" path="res://assets/kable minigame/kabelstretch3.png" id="19_e2pok"]
 [ext_resource type="Texture2D" uid="uid://cvjyhvgvo3ect" path="res://assets/tlo wpisywanie cyfr.png" id="20_5sl4u"]
 [ext_resource type="Texture2D" uid="uid://c3b186ajbvlck" path="res://assets/kable minigame/kabelstretch4.png" id="21_5gj1e"]
@@ -48,6 +51,8 @@
 [ext_resource type="Texture2D" uid="uid://ifsch2kmbbi" path="res://assets/IMG_2889.png" id="29_sya50"]
 [ext_resource type="Texture2D" uid="uid://ccybypwj3outs" path="res://assets/IMG_2883.png" id="30_5gj1e"]
 [ext_resource type="Texture2D" uid="uid://502uc7npdm11" path="res://assets/IMG_2886.png" id="31_8jhwh"]
+[ext_resource type="AudioStream" uid="uid://bvu645vhtklwo" path="res://assets/sounds/SFX/AmbienceDoKabelków.wav" id="32_ocswj"]
+[ext_resource type="AudioStream" uid="uid://fs2eimgxphk3" path="res://assets/sounds/SFX/Suwak.wav" id="39_x351s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwoyl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -1303,6 +1308,12 @@ one_shot = true
 wait_time = 0.7
 one_shot = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/reactor" unique_id=1294214669]
+stream = ExtResource("12_j64eu")
+
+[node name="KeypadNumerki" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/reactor" unique_id=15289368]
+stream = ExtResource("13_hev8t")
+
 [node name="screws" type="Control" parent="quests/CanvasLayer/allquests" unique_id=977486033]
 visible = false
 layout_mode = 1
@@ -1448,6 +1459,9 @@ libraries/ = SubResource("AnimationLibrary_lc52x")
 
 [node name="Timer" type="Timer" parent="quests/CanvasLayer/allquests/screws" unique_id=810812504]
 one_shot = true
+
+[node name="ŚrubaDokręcanie" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/screws" unique_id=15728063]
+stream = ExtResource("19_1g5l6")
 
 [node name="cables" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1442365101]
 layout_mode = 1
@@ -1677,6 +1691,10 @@ show_percentage = false
 wait_time = 0.1
 one_shot = true
 
+[node name="AmbienceDoKabelków" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/cables" unique_id=2129222568]
+stream = ExtResource("32_ocswj")
+volume_db = 18.72
+
 [node name="slider" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1043773421]
 visible = false
 layout_mode = 1
@@ -1882,6 +1900,9 @@ max_value = 3.0
 value = 3.0
 show_percentage = false
 
+[node name="Suwak" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/slider" unique_id=1941245504]
+stream = ExtResource("39_x351s")
+
 [node name="codes" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1320672957]
 visible = false
 layout_mode = 1
@@ -2086,6 +2107,9 @@ max_value = 4.0
 value = 4.0
 show_percentage = false
 
+[node name="KeypadNumerki" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/codes" unique_id=1829796639]
+stream = ExtResource("13_hev8t")
+
 [node name="always_shown" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1441021090]
 layout_mode = 1
 anchors_preset = 15
@@ -2181,6 +2205,7 @@ flat = true
 [connection signal="area_entered" from="quests/CanvasLayer/allquests/cables/plugs/b4/area4" to="quests/CanvasLayer/allquests/cables" method="_on_area_4_area_entered"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/cables/Timer" to="quests/CanvasLayer/allquests/cables" method="_on_timer_timeout"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/cables/starttimer" to="quests/CanvasLayer/allquests/cables" method="_on_starttimer_timeout"]
+[connection signal="finished" from="quests/CanvasLayer/allquests/cables/AmbienceDoKabelków" to="quests/CanvasLayer/allquests/cables" method="_on_ambience_do_kabelków_finished"]
 [connection signal="value_changed" from="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider" to="quests/CanvasLayer/allquests/slider" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider2" to="quests/CanvasLayer/allquests/slider" method="_on_h_slider_2_value_changed"]
 [connection signal="value_changed" from="quests/CanvasLayer/allquests/slider/VBoxContainer/HSlider3" to="quests/CanvasLayer/allquests/slider" method="_on_h_slider_3_value_changed"]

@@ -63,6 +63,10 @@ func _on_codes_pressed() -> void:
 
 func _on_wingame_pressed() -> void:
 	if donegames == [0,0,0,0,0]:
-		pass
+		get_tree().change_scene_to_file("res://endings/ending_kat].tscn")
 	if donegames == [1,1,1,1,1]: 
-		pass
+		get_tree().change_scene_to_file("res://endings/ending_zbawiciel.tscn")
+
+
+func _on_ambience_do_kabelków_finished() -> void:
+	pass # Replace with function body.
