@@ -10,13 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://61r0mwwkhmue" path="res://assets/IMG_1044.PNG" id="6_1ftms"]
 [ext_resource type="Texture2D" uid="uid://gun3juvdlc4d" path="res://assets/IMG_1041.PNG" id="6_fl65m"]
 [ext_resource type="Texture2D" uid="uid://in75ctp5wnbx" path="res://assets/IMG_1046.PNG" id="8_8bn17"]
+[ext_resource type="Script" uid="uid://baxtpvma1ylsr" path="res://screws.gd" id="11_4ofsq"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="12_4p23x"]
+[ext_resource type="Texture2D" uid="uid://dsqoy1fm6mnv2" path="res://assets/IMG_1617.png" id="12_j8b8d"]
+[ext_resource type="Texture2D" uid="uid://rx7fd2j3ypjs" path="res://IMG_3406.png" id="12_jtreq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nn0u8"]
 bg_color = Color(0.14, 0.14, 0.14, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_wtdyi"]
-font = ExtResource("3_0lhry")
-font_size = 27
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_76yo1"]
 texture = ExtResource("4_fl65m")
@@ -41,6 +41,72 @@ font_color = Color(0, 1, 0, 1)
 font_size = 32
 font_color = Color(0.6333332, 0, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4p23x"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtreq"]
+bg_color = Color(0.69, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_jtreq"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(131, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(97, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_j8b8d"]
+resource_name = "fall"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(131, -0.25, 0, 0.25, 0, 131, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.36666667)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(97, -0.25, 0, 0.25, 0, 1000, -0.16666667, -150.5, 0, 0),
+"times": PackedFloat32Array(0, 0.36666667)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lc52x"]
+_data = {
+&"RESET": SubResource("Animation_jtreq"),
+&"fall": SubResource("Animation_j8b8d")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_wtdyi"]
+font = ExtResource("3_0lhry")
+font_size = 27
+
 [sub_resource type="LabelSettings" id="LabelSettings_0lhry"]
 font = ExtResource("3_0lhry")
 font_size = 48
@@ -51,7 +117,7 @@ loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("message:position:x")
+tracks/0/path = NodePath("../always_shown/winmessage:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,7 +128,7 @@ tracks/0/keys = {
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("message:position:y")
+tracks/1/path = NodePath("../always_shown/winmessage:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -120,7 +186,7 @@ resource_name = "new_animation"
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("message:position:x")
+tracks/0/path = NodePath("../always_shown/winmessage:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -131,7 +197,7 @@ tracks/0/keys = {
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("message:position:y")
+tracks/1/path = NodePath("../always_shown/winmessage:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -284,6 +350,13 @@ offset_right = 228.0
 offset_bottom = 394.0
 text = "pattern quest"
 
+[node name="reactor2" type="Button" parent="buttons" unique_id=279493771]
+offset_left = 320.0
+offset_top = 320.0
+offset_right = 434.0
+offset_bottom = 421.0
+text = "screw quest"
+
 [node name="quests" type="Node2D" parent="." unique_id=1563291383]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="quests" unique_id=1283223873]
@@ -300,6 +373,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nn0u8")
 
 [node name="reactor" type="Control" parent="quests/CanvasLayer/allquests" unique_id=197739762]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -307,20 +381,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_xtb1e")
-
-[node name="Label" type="Label" parent="quests/CanvasLayer/allquests/reactor" unique_id=247070436]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -192.0
-offset_top = 20.0
-offset_right = 192.0
-offset_bottom = 58.0
-grow_horizontal = 2
-text = "cos tam jakias minigra"
-label_settings = SubResource("LabelSettings_wtdyi")
-horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="quests/CanvasLayer/allquests/reactor" unique_id=783126428]
 layout_mode = 1
@@ -502,6 +562,7 @@ columns = 3
 [node name="1" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1492149175]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8bn17")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -510,6 +571,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
 [node name="2" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=211584053]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -518,6 +580,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
 [node name="3" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=956749370]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -526,6 +589,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
 [node name="4" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1683502635]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -534,6 +598,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
 [node name="5" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1192025484]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -542,6 +607,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
 [node name="6" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1365988813]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -550,6 +616,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
 [node name="7" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1101730822]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -558,6 +625,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
 [node name="8" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=18776157]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -566,6 +634,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_0ibrq")
 [node name="9" type="Button" parent="quests/CanvasLayer/allquests/reactor/HBoxContainer/Panel2/reactorbuttons" unique_id=1839308521]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_76yo1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0lhry")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ftms")
@@ -661,23 +730,6 @@ layout_mode = 2
 text = "sabotaż: 1"
 label_settings = SubResource("LabelSettings_1ftms")
 
-[node name="message" type="Label" parent="quests/CanvasLayer/allquests/reactor" unique_id=1199825114]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1336.0002
-offset_top = -29.0
-offset_right = -734.99927
-offset_bottom = 19.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(300, 0)
-text = "zadanie wykonane!"
-label_settings = SubResource("LabelSettings_0lhry")
-
 [node name="Control" type="Control" parent="quests/CanvasLayer/allquests/reactor" unique_id=1302380512]
 visible = false
 layout_mode = 1
@@ -703,16 +755,213 @@ one_shot = true
 wait_time = 0.7
 one_shot = true
 
-[node name="minigamedone" type="AnimationPlayer" parent="quests/CanvasLayer/allquests/reactor" unique_id=582192880]
+[node name="screws" type="Control" parent="quests/CanvasLayer/allquests" unique_id=977486033]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_4ofsq")
+
+[node name="TextureRect" type="TextureRect" parent="quests/CanvasLayer/allquests/screws" unique_id=669716348]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.00024
+offset_top = -196.0
+offset_right = 448.00024
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_4p23x")
+
+[node name="panel" type="TextureRect" parent="quests/CanvasLayer/allquests/screws" unique_id=1100322999]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -445.00024
+offset_top = -227.0
+offset_right = 445.00024
+offset_bottom = 226.99951
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_j8b8d")
+expand_mode = 2
+
+[node name="screw1" type="Button" parent="quests/CanvasLayer/allquests/screws/panel" unique_id=687555898]
+layout_mode = 1
+offset_left = 29.0
+offset_top = 31.0
+offset_right = 69.0
+offset_bottom = 71.0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 0
+button_mask = 3
+icon = ExtResource("12_jtreq")
+flat = true
+expand_icon = true
+
+[node name="screw2" type="Button" parent="quests/CanvasLayer/allquests/screws/panel" unique_id=1227873971]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -69.00049
+offset_top = 31.0
+offset_right = -29.000488
+offset_bottom = 71.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 0
+button_mask = 3
+icon = ExtResource("12_jtreq")
+flat = true
+expand_icon = true
+
+[node name="screw3" type="Button" parent="quests/CanvasLayer/allquests/screws/panel" unique_id=89614531]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -69.00049
+offset_top = -71.0
+offset_right = -29.000488
+offset_bottom = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 0
+button_mask = 3
+icon = ExtResource("12_jtreq")
+flat = true
+expand_icon = true
+
+[node name="screw4" type="Button" parent="quests/CanvasLayer/allquests/screws/panel" unique_id=2053072994]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = -71.0
+offset_right = 77.0
+offset_bottom = -31.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+focus_mode = 0
+button_mask = 3
+icon = ExtResource("12_jtreq")
+flat = true
+expand_icon = true
+
+[node name="ProgressBar" type="ProgressBar" parent="quests/CanvasLayer/allquests/screws" unique_id=489355182]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_4p23x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jtreq")
+max_value = 8.0
+value = 8.0
+show_percentage = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="quests/CanvasLayer/allquests/screws" unique_id=1874141360]
+root_node = NodePath("../panel")
+libraries/ = SubResource("AnimationLibrary_lc52x")
+
+[node name="Timer" type="Timer" parent="quests/CanvasLayer/allquests/screws" unique_id=810812504]
+one_shot = true
+
+[node name="cables" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1442365101]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Line2D" type="Line2D" parent="quests/CanvasLayer/allquests/cables" unique_id=1490144702]
+position = Vector2(-48, -96)
+scale = Vector2(1.3469387, 1.2346938)
+points = PackedVector2Array(120, 40, 216, 136, 200, 184, 136, 216, 80, 208, -47.515156, 259.17355, -53.454548, 51.83471)
+width = 43.29
+texture = ExtResource("6_fl65m")
+texture_mode = 2
+
+[node name="always_shown" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1441021090]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="gamename" type="Label" parent="quests/CanvasLayer/allquests/always_shown" unique_id=247070436]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -197.5
+offset_top = 20.0
+offset_right = 197.5
+offset_bottom = 58.0
+grow_horizontal = 2
+text = "cos tam jakias minigra"
+label_settings = SubResource("LabelSettings_wtdyi")
+horizontal_alignment = 1
+
+[node name="winmessage" type="Label" parent="quests/CanvasLayer/allquests/always_shown" unique_id=1199825114]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1336.0002
+offset_top = -29.0
+offset_right = -734.9988
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(300, 0)
+text = "zadanie wykonane!"
+label_settings = SubResource("LabelSettings_0lhry")
+
+[node name="minigamedone" type="AnimationPlayer" parent="quests/CanvasLayer/allquests" unique_id=582192880]
+unique_name_in_owner = true
+root_node = NodePath("../reactor")
 libraries/ = SubResource("AnimationLibrary_4p23x")
 autoplay = &"RESET"
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="quests/CanvasLayer/allquests/reactor" unique_id=1866609762]
-root_node = NodePath("../..")
+[node name="gamefade" type="AnimationPlayer" parent="quests/CanvasLayer/allquests" unique_id=1866609762]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_sbvtr")
 
 [connection signal="pressed" from="buttons/reactor" to="." method="_on_reactor_pressed"]
+[connection signal="pressed" from="buttons/reactor2" to="." method="_on_reactor_2_pressed"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/Timer" to="quests/CanvasLayer/allquests/reactor" method="_on_timer_timeout"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/resettimer" to="quests/CanvasLayer/allquests/reactor" method="_on_resettimer_timeout"]
 [connection signal="timeout" from="quests/CanvasLayer/allquests/reactor/timerblank" to="quests/CanvasLayer/allquests/reactor" method="_on_timerblank_timeout"]
-[connection signal="animation_finished" from="quests/CanvasLayer/allquests/reactor/minigamedone" to="quests/CanvasLayer/allquests/reactor" method="_on_minigamedone_animation_finished"]
+[connection signal="timeout" from="quests/CanvasLayer/allquests/screws/Timer" to="quests/CanvasLayer/allquests/screws" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="quests/CanvasLayer/allquests/minigamedone" to="quests/CanvasLayer/allquests/reactor" method="_on_minigamedone_animation_finished"]

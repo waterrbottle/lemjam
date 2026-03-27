@@ -21,7 +21,7 @@ func _ready() -> void:
 func start() -> void:
 	done=0
 	sabo=0
-	$minigamedone.play("RESET")
+	%minigamedone.play("RESET")
 	print("RESET")
 	completed = [0,0,0,0,0]
 	lock= true
@@ -37,10 +37,7 @@ func start() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print("DONE")
-	print(done)
-	print("SABO")
-	print(sabo)
+
 	for n in $HBoxContainer/Panel/ColorRect/lights.get_children():
 		if completed[n.get_index()] == 1:
 			n.modulate = Color(0.0, 1.0, 0.017, 1.0)
@@ -82,12 +79,14 @@ func _on_timer_timeout() -> void:
 
 func donefunction():
 	if done > sabo:
-		$message.text = "zadanie wykonane!"
-		$message.modulate = Color(0.0, 1.0, 0.017, 1.0)
+		%winmessage.text = "zadanie wykonane!"
+		%winmessage.modulate = Color(0.0, 1.0, 0.017, 1.0)
+		get_tree().current_scene.done += 1
 	else:
-		$message.modulate = Color(0.783, 0.0, 1.0, 1.0)
-		$message.text = "zadanie zsabotowane"
-	$minigamedone.play("new_animation")
+		%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
+		%winmessage.text = "zadanie zsabotowane"
+		get_tree().current_scene.sabotaged += 1
+	%minigamedone.play("new_animation")
 func bpressed(ind):
 	if lock == true:
 		return
@@ -151,4 +150,4 @@ func _on_timerblank_timeout() -> void:
 
 
 func _on_minigamedone_animation_finished(anim_name: StringName) -> void:
-	$AnimationPlayer2.play("eloback")
+	%gamefade.play("eloback")
