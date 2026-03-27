@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://c8wdoout2tyk4"]
+
+[ext_resource type="Texture2D" uid="uid://dphbp2wof57dd" path="res://from console cryo/maszyny_cryo_2.png" id="1_nt1vu"]
+[ext_resource type="FontFile" uid="uid://28e2vuijk0sj" path="res://main menu/Lucznik1303Plus-z0aG.ttf" id="2_cswd4"]
+[ext_resource type="Script" uid="uid://d0d0vmkjbqmpq" path="res://endings/label.gd" id="3_uy8l1"]
+[ext_resource type="Texture2D" uid="uid://dpm2oex10t25j" path="res://assets/button.PNG" id="4_duaaf"]
+[ext_resource type="Texture2D" uid="uid://4t0wvovfn0v3" path="res://assets/Buttonmenupressed.png" id="5_yh2qs"]
+[ext_resource type="Script" uid="uid://bk48od3epahd2" path="res://from console cryo/return_cryo.gd" id="6_00dli"]
+[ext_resource type="Script" uid="uid://uqsqe3inb5sq" path="res://from console cryo/read_cryo_labels.gd" id="7_skdfx"]
+[ext_resource type="AudioStream" uid="uid://bee1bfurtptwb" path="res://starts/ForMillionsAmbience.wav" id="8_cswd4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vq43l"]
+texture = ExtResource("1_nt1vu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lf71v"]
+texture = ExtResource("4_duaaf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3jq6r"]
+texture = ExtResource("5_yh2qs")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ejybi"]
+texture = ExtResource("5_yh2qs")
+
+[node name="Node2D" type="Node2D" unique_id=1603266146]
+
+[node name="Panel" type="Panel" parent="." unique_id=975853798]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vq43l")
+
+[node name="Label2" type="Label" parent="Panel" unique_id=140670953]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1050.0
+offset_top = -872.0
+offset_right = -100.0
+offset_bottom = -224.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5372549)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_cswd4")
+theme_override_font_sizes/font_size = 21
+text = "Gdy spoglądasz w górę, dostrzegasz kolejny poziom statku. Po krótkiej chwili wahania decydujesz się sprawdzić, co naprawdę znajduje się w zacienionym pokoju nad tobą. Wspinasz się po kolejnej drabinie i znajdujesz ładunek, o który masz zadbać. To formy życia zmierzające na inną planetę, gdzie muszą dotrzeć, aby wypełnić powierzone im zadanie.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+visible_characters_behavior = 2
+script = ExtResource("3_uy8l1")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1006806497]
+offset_left = 91.0
+offset_top = 540.0
+offset_right = 291.0
+offset_bottom = 620.0
+
+[node name="return" type="Button" parent="VBoxContainer2" unique_id=478354328]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_cswd4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lf71v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3jq6r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ejybi")
+text = "konsola"
+script = ExtResource("6_00dli")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=977515419]
+offset_left = 858.0
+offset_top = 539.0
+offset_right = 1058.0
+offset_bottom = 619.0
+
+[node name="return" type="Button" parent="VBoxContainer" unique_id=1569747694]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_cswd4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lf71v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3jq6r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ejybi")
+text = "przeczytaj"
+script = ExtResource("7_skdfx")
+
+[node name="ForMillionsAmbience" type="AudioStreamPlayer2D" parent="." unique_id=106288461]
+position = Vector2(566, 421)
+stream = ExtResource("8_cswd4")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer2/return" to="VBoxContainer2/return" method="_on_return_pressed"]
+[connection signal="pressed" from="VBoxContainer/return" to="VBoxContainer/return" method="_on_return_pressed"]

@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://b1e6tuit4euh4"]
+
+[ext_resource type="Texture2D" uid="uid://3iwgvjlmyu1y" path="res://main menu/Credits.png" id="1_ii4w1"]
+[ext_resource type="FontFile" uid="uid://28e2vuijk0sj" path="res://main menu/Lucznik1303Plus-z0aG.ttf" id="2_malvc"]
+[ext_resource type="Texture2D" uid="uid://dpm2oex10t25j" path="res://assets/button.PNG" id="2_u7t8m"]
+[ext_resource type="Texture2D" uid="uid://4t0wvovfn0v3" path="res://assets/Buttonmenupressed.png" id="4_vm8q0"]
+[ext_resource type="Script" uid="uid://ypjf428m44xk" path="res://main menu/button_return.gd" id="5_vm8q0"]
+[ext_resource type="Texture2D" uid="uid://b1woiuh7ww0ld" path="res://main menu/Grafika_bez_nazwy.png" id="6_pmosu"]
+[ext_resource type="AudioStream" uid="uid://6nr5k2yov1b" path="res://main menu/Button.wav" id="7_5sgfn"]
+[ext_resource type="AudioStream" uid="uid://8t2i0mxagkpn" path="res://main menu/MainMenu (1).wav" id="8_4addc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7t8m"]
+texture = ExtResource("1_ii4w1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikuon"]
+texture = ExtResource("2_u7t8m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmosu"]
+texture = ExtResource("4_vm8q0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r5jn"]
+texture = ExtResource("4_vm8q0")
+
+[node name="Control" type="Control" unique_id=1711496834]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="." unique_id=1912119142]
+layout_mode = 0
+offset_top = -12.0
+offset_right = 1920.0
+offset_bottom = 1068.0
+scale = Vector2(0.601, 0.612)
+theme_override_styles/panel = SubResource("StyleBoxTexture_u7t8m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=936426185]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 572.0
+offset_right = 210.0
+offset_bottom = 652.0
+
+[node name="return" type="Button" parent="VBoxContainer" unique_id=882350839]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_malvc")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_ikuon")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pmosu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2r5jn")
+text = "powrót"
+script = ExtResource("5_vm8q0")
+
+[node name="GrafikaBezNazwy" type="Sprite2D" parent="." unique_id=939272478]
+position = Vector2(1091.0001, 61)
+scale = Vector2(0.04681398, 0.04681398)
+texture = ExtResource("6_pmosu")
+
+[node name="clickaudio" type="AudioStreamPlayer" parent="." unique_id=536521162]
+unique_name_in_owner = true
+stream = ExtResource("7_5sgfn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=687800918]
+stream = ExtResource("8_4addc")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/return" to="VBoxContainer/return" method="_on_return_pressed"]
