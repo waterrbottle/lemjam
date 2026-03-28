@@ -37,9 +37,9 @@ func start() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$Timer.wait_time = 1.0 - Global.difficulty/5.0
-	$resettimer.wait_time = 1.0 - Global.difficulty/5.0
-	$timerblank.wait_time = 0.7 - Global.difficulty/5.0
+	$Timer.wait_time = 1.0 - (Global.difficulty*0.3)
+	$resettimer.wait_time = 1.0 - (Global.difficulty*0.3)
+	$timerblank.wait_time = 0.7 - (Global.difficulty*0.3)
 	for n in $HBoxContainer/Panel/ColorRect/lights.get_children():
 		if completed[n.get_index()] == 1:
 			n.modulate = Color(0.0, 1.0, 0.017, 1.0)
