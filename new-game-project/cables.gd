@@ -12,7 +12,8 @@ func _ready() -> void:
 	pass
 func start():
 	$"AmbienceDoKabelków".play()
-	timer = 6
+	timer = 6 - (Global.difficulty * 0.5)
+	$ProgressBar.max_value = 6 - (Global.difficulty * 0.5)
 	currentlypressed = -1
 	selected = [-1,-1,-1,-1]
 	%minigamedone.play("RESET")
