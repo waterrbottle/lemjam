@@ -1,13 +1,14 @@
 extends Control
 var values = []
 var done =[0,0,0]
-var timer = 3
+var timer = 2.3
 var running = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 func start():
-	timer= 3
+	timer= 2.3
+	
 	running = true
 	
 	$VBoxContainer/HSlider.value=5
@@ -43,16 +44,18 @@ func good():
 	%winmessage.modulate = Color(0.0, 1.0, 0.017, 1.0)
 	get_tree().current_scene.done += 1
 	%minigamedone.play("new_animation")
-	get_tree().current_scene.donegames[3] = 0
+	Global.donegames[3] = 0
 func sabo():
-	get_tree().current_scene.donegames[3] = 1
+	Global.donegames[3] = 1
 	running=false
 	%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
 	%winmessage.text = "zadanie zsabotowane"
-	get_tree().current_scene.sabotaged += 1
+
 	%minigamedone.play("new_animation")
 
 func _on_h_slider_3_value_changed(value: float) -> void:
+	if running == false:
+		return
 	print(value)
 	print(values)
 	if value == values[2] * 1.0:
@@ -67,6 +70,8 @@ func _on_h_slider_3_value_changed(value: float) -> void:
 	$Suwak.play()
 
 func _on_h_slider_2_value_changed(value: float) -> void:
+	if running == false:
+		return
 	if value == values[1] * 1.0:
 		done[1] = 2
 	if value == values[4] * 1.0:
@@ -79,6 +84,8 @@ func _on_h_slider_2_value_changed(value: float) -> void:
 	$Suwak.play()
 
 func _on_h_slider_value_changed(value: float) -> void:
+	if running == false:
+		return
 	if value == values[0] * 1.0:
 		done[0] = 2
 	if value == values[3] * 1.0:

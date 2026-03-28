@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bieda8xsm0p2t"]
+[gd_scene format=3 uid="uid://dybsofw1ih8mk"]
 
 [ext_resource type="Texture2D" uid="uid://s2rl6y62qd5b" path="res://from console cryo/IMG_2924.png" id="1_4ef5q"]
 [ext_resource type="FontFile" uid="uid://28e2vuijk0sj" path="res://main menu/Lucznik1303Plus-z0aG.ttf" id="2_7i5x0"]
@@ -74,9 +74,9 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_lckc5")
 text = "konsola"
 script = ExtResource("6_v1fcb")
 
-[node name="ForMillionsAmbience" type="AudioStreamPlayer2D" parent="." unique_id=2052384805]
-position = Vector2(651, 347)
+[node name="ForMillionsAmbience" type="AudioStreamPlayer" parent="." unique_id=927880010]
 stream = ExtResource("7_7i5x0")
+volume_db = 15.0
 autoplay = true
 
 [connection signal="pressed" from="Panel/Label/VBoxContainer/return" to="Panel/Label/VBoxContainer/return" method="_on_return_pressed"]

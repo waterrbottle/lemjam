@@ -104,6 +104,21 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_nvsu5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5t5w0")
 text = "Autorzy"
 
+[node name="settings" type="Button" parent="VBoxContainer" unique_id=522204763]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.82122624, 0, 0.04900164, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_5t5w0")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxTexture_vf4t8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ks6g0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xxlv4")
+text = "Ustawienia"
+
 [node name="exit" type="Button" parent="VBoxContainer" unique_id=117167996]
 layout_mode = 2
 size_flags_vertical = 3
@@ -139,7 +154,7 @@ theme_override_constants/shadow_offset_y = 1
 theme_override_constants/shadow_outline_size = 12
 theme_override_fonts/font = ExtResource("5_5t5w0")
 theme_override_font_sizes/font_size = 20
-text = "Teksty devów"
+text = "Teksty devuw"
 horizontal_alignment = 1
 script = ExtResource("4_2ni00")
 
@@ -148,6 +163,7 @@ stream = ExtResource("7_arib0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=726453909]
 stream = ExtResource("7_nbski")
+volume_db = 10.0
 autoplay = true
 
 [node name="Napis5" type="Sprite2D" parent="." unique_id=494028141]
@@ -158,5 +174,6 @@ texture = ExtResource("9_arib0")
 [connection signal="pressed" from="VBoxContainer/new game" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/authors" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/authors" to="." method="_on_authors_pressed"]
+[connection signal="pressed" from="VBoxContainer/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

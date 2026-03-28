@@ -73,9 +73,9 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_8qwde")
 text = "dalej"
 script = ExtResource("6_pshgn")
 
-[node name="ForMillionsAmbience" type="AudioStreamPlayer2D" parent="." unique_id=163222439]
-position = Vector2(648, 354)
+[node name="ForMillionsAmbience" type="AudioStreamPlayer" parent="." unique_id=376215961]
 stream = ExtResource("7_oemqk")
+volume_db = 15.0
 autoplay = true
 
 [connection signal="pressed" from="Panel/Label/VBoxContainer/return" to="Panel/Label/VBoxContainer/return" method="_on_return_pressed"]

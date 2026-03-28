@@ -10,21 +10,17 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
 run/main_scene="uid://cv74w5igteoxc"
-config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.6")
+
+[autoload]
+
+Global="*uid://cnkbw6bkrdbod"
 
 [display]
 
 window/stretch/mode="canvas_items"
 
-[physics]
-
-3d/physics_engine="Jolt Physics"
-
 [rendering]
 
-rendering_device/driver.windows="d3d12"
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

@@ -42,10 +42,10 @@ func _process(delta: float) -> void:
 				get_tree().current_scene.done += 1
 				%minigamedone.play("new_animation")
 				running = false
-				get_tree().current_scene.donegames[4] = 0
+				Global.donegames[4] = 0
 			
 			elif code == copy:
-				get_tree().current_scene.donegames[4] = 1
+				Global.donegames[4] = 1
 				%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
 				%winmessage.text = "zadanie zsabotowane"
 				get_tree().current_scene.sabotaged += 1

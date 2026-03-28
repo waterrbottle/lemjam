@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://b2epatnpqog33" path="res://from console cryo/return_to_cryu.gd" id="5_utbtm"]
 [ext_resource type="Texture2D" uid="uid://61r0mwwkhmue" path="res://assets/IMG_1044.PNG" id="6_1ftms"]
 [ext_resource type="Texture2D" uid="uid://gun3juvdlc4d" path="res://assets/IMG_1041.PNG" id="6_fl65m"]
+[ext_resource type="Texture2D" uid="uid://c5gjku523c1xy" path="res://assets/IMG_2929.PNG" id="7_4tqfu"]
 [ext_resource type="Texture2D" uid="uid://in75ctp5wnbx" path="res://assets/IMG_1046.PNG" id="8_8bn17"]
 [ext_resource type="Texture2D" uid="uid://dp5lppk6vdrvx" path="res://assets/IMG_2884.png" id="8_xkysf"]
 [ext_resource type="Script" uid="uid://baxtpvma1ylsr" path="res://screws.gd" id="11_4ofsq"]
@@ -57,6 +58,9 @@
 [ext_resource type="Texture2D" uid="uid://502uc7npdm11" path="res://assets/IMG_2886.png" id="31_8jhwh"]
 [ext_resource type="AudioStream" uid="uid://bvu645vhtklwo" path="res://assets/sounds/SFX/AmbienceDoKabelków.wav" id="32_ocswj"]
 [ext_resource type="AudioStream" uid="uid://fs2eimgxphk3" path="res://assets/sounds/SFX/Suwak.wav" id="39_x351s"]
+[ext_resource type="Texture2D" uid="uid://caoe5smeif0b1" path="res://assets/IMG_2890.png" id="58_7vnnl"]
+[ext_resource type="AudioStream" uid="uid://bee1bfurtptwb" path="res://starts/ForMillionsAmbience.wav" id="59_5jo5x"]
+[ext_resource type="Texture2D" uid="uid://8my7brs7rkhb" path="res://assets/karteczka_meoww.png" id="60_utbtm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_si422"]
 texture = ExtResource("3_7vnnl")
@@ -366,6 +370,9 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ni6yh"]
+texture = ExtResource("7_4tqfu")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nn0u8"]
 bg_color = Color(0.07, 0.07, 0.07, 1)
@@ -838,17 +845,133 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
+[sub_resource type="LabelSettings" id="LabelSettings_5jo5x"]
+font = ExtResource("3_0lhry")
+font_size = 32
+font_color = Color(0.13, 0.08449999, 0, 1)
+outline_size = 5
+outline_color = Color(0.12941177, 0.08627451, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4tqfu"]
+font = ExtResource("2_knrxo")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_4tqfu"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1000, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect2:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(60.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect2:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect2:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.01, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_wqh86"]
+resource_name = "new_animation"
+length = 0.47
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1000, -0.25, 0, 0.25, 0, 107.55554, -0.16666667, -184.59259, 0, 0),
+"times": PackedFloat32Array(0, 0.33333337)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect2:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(60.5, -0.25, 0, 0.25, 0, 60.5, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.33333337)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect2:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.16666667, 0, 0, 0, 1, -0.028333332, 0, 0, 0),
+"times": PackedFloat32Array(0.16666667, 0.4, 0.46666667)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect2:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.01, -0.25, 0, 0.25, 0, 1.4, -0.16666667, -0.165, 0, 0, 1, -0.028333332, 0.06666667, 0, 0),
+"times": PackedFloat32Array(0.16666667, 0.4, 0.46666667)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m5ygy"]
+_data = {
+&"RESET": SubResource("Animation_4tqfu"),
+&"new_animation": SubResource("Animation_wqh86")
+}
+
 [node name="Mainscene" type="Node2D" unique_id=1416502856]
 script = ExtResource("1_wtdyi")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2008434605]
-offset_left = 480.0
-offset_top = 10.0
-offset_right = 680.0
-offset_bottom = 90.0
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=226968403]
 
-[node name="return" type="Button" parent="VBoxContainer" unique_id=231058638]
-layout_mode = 2
+[node name="return" type="Button" parent="CanvasLayer2" unique_id=231058638]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_right = 200.0
+grow_vertical = 0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -887,6 +1010,18 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ocswj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_j64eu")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_hev8t")
 theme_override_styles/focus = SubResource("StyleBoxFlat_1g5l6")
+
+[node name="Button" type="Button" parent="buttons/reactor" unique_id=528446206]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -17.5
+offset_right = -4.0
+offset_bottom = 14.0
+grow_vertical = 2
+text = "i"
 
 [node name="screw" type="Button" parent="buttons" unique_id=279493771]
 offset_left = 768.1653
@@ -934,8 +1069,94 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_fg3di")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_laoi3")
 theme_override_styles/focus = SubResource("StyleBoxFlat_yy1qe")
 
+[node name="infobuttons" type="Node2D" parent="." unique_id=1490436063]
+
+[node name="sliders" type="Button" parent="infobuttons" unique_id=1551072141]
+offset_left = 552.0
+offset_top = 126.0
+offset_right = 601.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_pressed_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_hover_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_fonts/font = ExtResource("2_knrxo")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ni6yh")
+text = "i"
+
+[node name="codes" type="Button" parent="infobuttons" unique_id=101783552]
+offset_left = 554.0
+offset_top = 309.0
+offset_right = 603.0
+offset_bottom = 354.0
+theme_override_colors/font_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_pressed_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_hover_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_fonts/font = ExtResource("2_knrxo")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ni6yh")
+text = "i"
+
+[node name="reactor" type="Button" parent="infobuttons" unique_id=1504633139]
+offset_left = 552.0
+offset_top = 479.0
+offset_right = 601.0
+offset_bottom = 524.0
+theme_override_colors/font_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_pressed_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_hover_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_fonts/font = ExtResource("2_knrxo")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ni6yh")
+text = "i"
+
+[node name="cables" type="Button" parent="infobuttons" unique_id=2096196900]
+offset_left = 267.0
+offset_top = 443.0
+offset_right = 316.0
+offset_bottom = 488.0
+theme_override_colors/font_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_pressed_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_hover_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_fonts/font = ExtResource("2_knrxo")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ni6yh")
+text = "i"
+
+[node name="screw" type="Button" parent="infobuttons" unique_id=1515502368]
+offset_left = 834.0
+offset_top = 441.0
+offset_right = 883.0
+offset_bottom = 486.0
+theme_override_colors/font_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_pressed_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_colors/font_hover_color = Color(0.43529412, 0.8, 0.8352941, 1)
+theme_override_fonts/font = ExtResource("2_knrxo")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ni6yh")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ni6yh")
+text = "i"
+
 [node name="quests" type="Node2D" parent="." unique_id=1563291383]
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="quests" unique_id=1283223873]
 
@@ -1345,6 +1566,7 @@ one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/reactor" unique_id=1294214669]
 stream = ExtResource("12_j64eu")
+volume_db = -7.0
 
 [node name="KeypadNumerki" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/reactor" unique_id=15289368]
 stream = ExtResource("13_hev8t")
@@ -1499,6 +1721,7 @@ one_shot = true
 stream = ExtResource("19_1g5l6")
 
 [node name="cables" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1442365101]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1728,10 +1951,9 @@ one_shot = true
 
 [node name="AmbienceDoKabelków" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/cables" unique_id=2129222568]
 stream = ExtResource("32_ocswj")
-volume_db = 18.72
+volume_db = 24.0
 
 [node name="slider" type="Control" parent="quests/CanvasLayer/allquests" unique_id=1043773421]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1931,8 +2153,8 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_4p23x")
 theme_override_styles/fill = SubResource("StyleBoxFlat_jtreq")
-max_value = 3.0
-value = 3.0
+max_value = 2.3
+value = 2.3
 show_percentage = false
 
 [node name="Suwak" type="AudioStreamPlayer" parent="quests/CanvasLayer/allquests/slider" unique_id=1941245504]
@@ -2221,7 +2443,103 @@ theme_override_fonts/font = ExtResource("3_0lhry")
 text = "ok?"
 flat = true
 
-[connection signal="pressed" from="VBoxContainer/return" to="VBoxContainer/return" method="_on_return_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=179718946]
+position = Vector2(229.00003, 152)
+rotation = -0.4118977
+scale = Vector2(0.39691356, 0.39691356)
+texture = ExtResource("58_7vnnl")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=610969871]
+offset_left = -97.280334
+offset_top = -91.98979
+offset_right = 174.71967
+offset_bottom = 10.010208
+rotation = 0.38397244
+text = "czy
+ sluchac
+intuicji?"
+label_settings = SubResource("LabelSettings_5jo5x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1961025847]
+position = Vector2(131, 119.00001)
+scale = Vector2(0.39691356, 0.39691356)
+texture = ExtResource("58_7vnnl")
+
+[node name="Label" type="Label" parent="Sprite2D2" unique_id=464725703]
+offset_left = -103.29704
+offset_top = -95.73876
+offset_right = 168.70296
+offset_bottom = -28.738762
+rotation = 0.38397244
+text = "czy byc
+poslusznym?"
+label_settings = SubResource("LabelSettings_5jo5x")
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=121855861]
+stream = ExtResource("59_5jo5x")
+volume_db = 10.493
+autoplay = true
+
+[node name="tip" type="CanvasLayer" parent="." unique_id=1519176555]
+
+[node name="TextureRect2" type="TextureRect" parent="tip" unique_id=38000052]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1576.0
+offset_top = -263.5
+offset_right = -639.11206
+offset_bottom = 263.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.01)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("60_utbtm")
+expand_mode = 1
+
+[node name="tiplabel" type="Label" parent="tip/TextureRect2" unique_id=976918151]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 81.44446
+offset_top = 46.5
+offset_right = -81.44446
+offset_bottom = -34.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "TASK 1 – USZCZELNIENIE SILNIKA:
+Jedna z płytek mocujących silnik poluzowała się. Musisz naprawić usterkę i dokręcić śruby, które mocują plakietkę w miejscu, aby bateria znajdowała się w odpowiednim miejscu. Domyślasz się jednak, że odkręcenie mocowań doprowadzi do spowolnienia maszyny."
+label_settings = SubResource("LabelSettings_4tqfu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="backtip" type="Button" parent="tip/TextureRect2" unique_id=92915731]
+layout_mode = 0
+offset_left = 46.444458
+offset_top = 22.5
+offset_right = 133.44446
+offset_bottom = 115.5
+theme_override_colors/font_color = Color(0.45, 0.09449999, 0.09449999, 1)
+theme_override_colors/font_focus_color = Color(0.4509804, 0.09411765, 0.09411765, 1)
+theme_override_colors/font_pressed_color = Color(0.32, 0.06719999, 0.06719999, 1)
+theme_override_colors/font_hover_color = Color(0.45, 0.216, 0.216, 1)
+theme_override_fonts/font = ExtResource("2_knrxo")
+theme_override_font_sizes/font_size = 80
+text = "x"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tip" unique_id=47822821]
+libraries/ = SubResource("AnimationLibrary_m5ygy")
+
+[connection signal="pressed" from="CanvasLayer2/return" to="CanvasLayer2/return" method="_on_return_pressed"]
 [connection signal="pressed" from="buttons/reactor" to="." method="_on_reactor_pressed"]
 [connection signal="pressed" from="buttons/screw" to="." method="_on_reactor_2_pressed"]
 [connection signal="pressed" from="buttons/cables" to="." method="_on_cables_pressed"]
@@ -2248,3 +2566,5 @@ flat = true
 [connection signal="pressed" from="quests/CanvasLayer/allquests/codes/Control/b0" to="quests/CanvasLayer/allquests/codes" method="_on_b_0_pressed"]
 [connection signal="animation_finished" from="quests/CanvasLayer/allquests/minigamedone" to="quests/CanvasLayer/allquests/reactor" method="_on_minigamedone_animation_finished"]
 [connection signal="pressed" from="Panel/wingame" to="." method="_on_wingame_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[connection signal="pressed" from="tip/TextureRect2/backtip" to="." method="_on_backtip_pressed"]

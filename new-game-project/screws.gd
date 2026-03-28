@@ -11,6 +11,8 @@ func _ready() -> void:
 		n.connect("button_down", btnpressed.bind(n))
 		n.rotation_degrees = states[n.get_index()] * 90
 func start():
+	timer = 9 - Global.difficulty * 1.5
+	$ProgressBar.max_value = 9 - Global.difficulty * 1.5
 	$AnimationPlayer.play("RESET")
 	states = [5,5,5,5]
 	print(states)
@@ -18,7 +20,7 @@ func start():
 		n.rotation_degrees = states[n.get_index()] * 90
 		n.scale = states[n.get_index()] * Vector2(0.5,0.5)
 
-	timer = 8
+
 	
 	$ProgressBar.value = 10
 	%minigamedone.play("RESET")
@@ -26,19 +28,20 @@ func start():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if running == true:
 		print(states)
 		timer -= delta
 		if states == [2.0,2.0,2.0,2.0]:
 			%winmessage.text = "zadanie wykonane!"
 			%winmessage.modulate = Color(0.0, 1.0, 0.017, 1.0)
-			get_tree().current_scene.donegames[1] = 0
+			Global.donegames[1] = 0
 			get_tree().current_scene.done += 1
 			running = false
 			%minigamedone.play("new_animation")
 			
 		if states == [8.0,8.0,8.0,8.0]:
-			get_tree().current_scene.donegames[1] = 1
+			Global.donegames[1] = 1
 			%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
 			%winmessage.text = "zadanie zsabotowane"
 			#%minigamedone.play("new_animation")

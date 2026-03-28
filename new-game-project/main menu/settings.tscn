@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://cxidk5igsb26v"]
+
+[ext_resource type="Texture2D" uid="uid://6lp3ck588ghp" path="res://assets/Tlo_memory_buttons.PNG" id="1_s7grv"]
+[ext_resource type="Script" uid="uid://b027wsxeunj1j" path="res://main menu/settings.gd" id="1_tp7rj"]
+[ext_resource type="FontFile" uid="uid://28e2vuijk0sj" path="res://main menu/Lucznik1303Plus-z0aG.ttf" id="2_tp7rj"]
+[ext_resource type="Texture2D" uid="uid://dpm2oex10t25j" path="res://assets/button.PNG" id="3_3w5ek"]
+[ext_resource type="Texture2D" uid="uid://4t0wvovfn0v3" path="res://assets/Buttonmenupressed.png" id="4_tmiof"]
+[ext_resource type="AudioStream" uid="uid://8t2i0mxagkpn" path="res://main menu/MainMenu (1).wav" id="7_3w5ek"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6sxj1"]
+font = ExtResource("2_tp7rj")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_rkh52"]
+font = ExtResource("2_tp7rj")
+font_size = 32
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lhm8u"]
+texture = ExtResource("3_3w5ek")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7y32t"]
+texture = ExtResource("4_tmiof")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_spabw"]
+texture = ExtResource("4_tmiof")
+
+[node name="Settings" type="Node2D" unique_id=933365776]
+script = ExtResource("1_tp7rj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=803080868]
+
+[node name="Panel" type="TextureRect" parent="CanvasLayer" unique_id=1782882747]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_s7grv")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=913544806]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 24.0
+offset_right = 74.0
+offset_bottom = 58.0
+grow_horizontal = 2
+text = "settings"
+label_settings = SubResource("LabelSettings_6sxj1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=955063615]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -44.0
+offset_right = 304.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=975709309]
+layout_mode = 2
+text = "volume"
+label_settings = SubResource("LabelSettings_rkh52")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=1177661286]
+layout_mode = 2
+
+[node name="v1" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1097685851]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
+text = "none"
+
+[node name="v2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1757202866]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
+text = "low"
+
+[node name="v3" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=329254105]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
+text = "medium"
+
+[node name="v4" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1383391745]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
+text = "high"
+
+[node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=493936646]
+layout_mode = 2
+text = "difficulty"
+label_settings = SubResource("LabelSettings_rkh52")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=1250150235]
+layout_mode = 2
+
+[node name="return4" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=175681315]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
+text = "labubu"
+
+[node name="return" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=1896384140]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
+text = "average"
+
+[node name="return2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=1040426653]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
+text = "hard"
+
+[node name="return3" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=1177546309]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.3137255, 0.12941177, 0.4862745, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
+text = "impossible"
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=578485092]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("2_tp7rj")
+theme_override_font_sizes/font_size = 48
+text = "x"
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=942930378]
+stream = ExtResource("7_3w5ek")
+volume_db = 10.0
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/v1" to="." method="_on_v_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/v2" to="." method="_on_v_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/v3" to="." method="_on_v_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/v4" to="." method="_on_v_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer2/return4" to="." method="_on_return_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer2/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer2/return2" to="." method="_on_return_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer2/return3" to="." method="_on_return_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

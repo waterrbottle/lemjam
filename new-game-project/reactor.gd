@@ -37,7 +37,9 @@ func start() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-
+	$Timer.wait_time = 1.0 - Global.difficulty/5.0
+	$resettimer.wait_time = 1.0 - Global.difficulty/5.0
+	$timerblank.wait_time = 0.7 - Global.difficulty/5.0
 	for n in $HBoxContainer/Panel/ColorRect/lights.get_children():
 		if completed[n.get_index()] == 1:
 			n.modulate = Color(0.0, 1.0, 0.017, 1.0)
@@ -83,12 +85,12 @@ func donefunction():
 		%winmessage.text = "zadanie wykonane!"
 		%winmessage.modulate = Color(0.0, 1.0, 0.017, 1.0)
 		get_tree().current_scene.done += 1
-		get_tree().current_scene.donegames[0] = 0
+		Global.donegames[0] = 0
 	else:
 		%winmessage.modulate = Color(0.783, 0.0, 1.0, 1.0)
 		%winmessage.text = "zadanie zsabotowane"
 		get_tree().current_scene.sabotaged += 1
-		get_tree().current_scene.donegames[0] = 1
+		Global.donegames[0] = 1
 	%minigamedone.play("new_animation")
 func bpressed(ind):
 
