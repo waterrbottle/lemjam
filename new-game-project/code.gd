@@ -10,7 +10,8 @@ func _ready() -> void:
 		n.connect("pressed", bp.bind(n))
 
 func start():
-	time = 4
+	time = 4.5 - (Global.difficulty * 0.5)
+	$ProgressBar.max_value = 4.5 - (Global.difficulty * 0.5)
 	code=[]
 	codegood=[]
 	%minigamedone.play("RESET")
@@ -67,7 +68,7 @@ func bp(node):
 	
 	if running == true:
 		$KeypadNumerki.play()
-		$KeypadNumerki.pitch_scale = node.get_index()/ 2.0
+		$KeypadNumerki.pitch_scale = (node.get_index()+5)*0.1
 		code.append(node.get_index()+1)
 
 

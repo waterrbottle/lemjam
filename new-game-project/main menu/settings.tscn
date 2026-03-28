@@ -47,7 +47,7 @@ offset_top = 24.0
 offset_right = 74.0
 offset_bottom = 58.0
 grow_horizontal = 2
-text = "settings"
+text = "Ustawienia (settings)"
 label_settings = SubResource("LabelSettings_6sxj1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=955063615]
@@ -63,7 +63,7 @@ offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=975709309]
+[node name="vollab" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=975709309]
 layout_mode = 2
 text = "volume"
 label_settings = SubResource("LabelSettings_rkh52")
@@ -87,7 +87,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
-text = "none"
+text = "wyciszona"
 
 [node name="v2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1757202866]
 custom_minimum_size = Vector2(200, 50)
@@ -103,7 +103,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
-text = "low"
+text = "niska"
 
 [node name="v3" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=329254105]
 custom_minimum_size = Vector2(200, 50)
@@ -119,7 +119,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
-text = "medium"
+text = "srednia"
 
 [node name="v4" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1383391745]
 custom_minimum_size = Vector2(200, 50)
@@ -135,9 +135,9 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
-text = "high"
+text = "maks"
 
-[node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=493936646]
+[node name="diflab" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=493936646]
 layout_mode = 2
 text = "difficulty"
 label_settings = SubResource("LabelSettings_rkh52")
@@ -177,7 +177,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
-text = "average"
+text = "zwykla"
 
 [node name="return2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=1040426653]
 custom_minimum_size = Vector2(200, 50)
@@ -193,7 +193,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_lhm8u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7y32t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_spabw")
-text = "hard"
+text = "trudna"
 
 [node name="return3" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=1177546309]
 custom_minimum_size = Vector2(200, 50)

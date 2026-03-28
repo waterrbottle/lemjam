@@ -7,8 +7,8 @@ var running = false
 func _ready() -> void:
 	pass # Replace with function body.
 func start():
-	timer= 2.3 - (Global.difficulty * 0.3)
-	$ProgressBar.max_value = 2.3 - (Global.difficulty * 0.3)
+	timer= 2.7 - (Global.difficulty * 0.3)
+	$ProgressBar.max_value = 2.7 - (Global.difficulty * 0.3)
 	running = true
 	
 	$VBoxContainer/HSlider.value=5

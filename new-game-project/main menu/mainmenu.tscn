@@ -83,11 +83,11 @@ theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_5t5w0")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_nbski")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_arib0")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bnhx1")
-text = "Nowa Gra"
+text = "Nowa Gra / Play"
 
 [node name="authors" type="Button" parent="VBoxContainer" unique_id=825874881]
 layout_mode = 2
@@ -98,11 +98,11 @@ theme_override_colors/font_hover_color = Color(0.81960785, 0, 0.047058824, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_5t5w0")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_v22hy")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_nvsu5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5t5w0")
-text = "Autorzy"
+text = "Autorzy / Authors"
 
 [node name="settings" type="Button" parent="VBoxContainer" unique_id=522204763]
 layout_mode = 2
@@ -113,11 +113,11 @@ theme_override_colors/font_hover_color = Color(0.82122624, 0, 0.04900164, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_5t5w0")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_vf4t8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ks6g0")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xxlv4")
-text = "Ustawienia"
+text = "Opcje / Settings "
 
 [node name="exit" type="Button" parent="VBoxContainer" unique_id=117167996]
 layout_mode = 2
@@ -128,11 +128,11 @@ theme_override_colors/font_hover_color = Color(0.82122624, 0, 0.04900164, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_5t5w0")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_vf4t8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ks6g0")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xxlv4")
-text = "Wyjście"
+text = "Wyjście / Exit"
 
 [node name="hovering text" type="Label" parent="." unique_id=275771606]
 layout_mode = 1

@@ -11,9 +11,10 @@ var timer = 6
 func _ready() -> void:
 	pass
 func start():
+
 	$"AmbienceDoKabelków".play()
-	timer = 6 - (Global.difficulty * 0.5)
-	$ProgressBar.max_value = 6 - (Global.difficulty * 0.5)
+	timer = 6.0 - (Global.difficulty * 1)
+	$ProgressBar.max_value = 6.0 - (Global.difficulty * 1)
 	currentlypressed = -1
 	selected = [-1,-1,-1,-1]
 	%minigamedone.play("RESET")
@@ -27,14 +28,14 @@ func start():
 	
 
 	randi_sockets.shuffle() # This rearranges the list randomly
-	print(randi_sockets)
+
 	for n in $sokcets.get_children():
 		n.texture = load(textures[randi_sockets[n.get_index()]])
 	$starttimer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+
 
 	#print(selected)
 	if running == true:

@@ -1,6 +1,7 @@
 extends Node2D
-
-
+var glosnosci = ["wyciszona (silent)", "cicha (quiet)", "srednia (average)", "maksymalna (max)"]
+var trudnosci = ["labubu (noob)", "normalna (normal)", "trudna (hard)", "IMPOSSIBLE"]
+var g = 3
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -8,7 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$CanvasLayer/VBoxContainer/vollab.text = "głośność (volume): " + glosnosci[g]
+	$CanvasLayer/VBoxContainer/diflab.text = "trudność (difficulty): " + trudnosci[Global.difficulty]
 
 
 func _on_button_pressed() -> void:
@@ -16,18 +18,23 @@ func _on_button_pressed() -> void:
 
 
 func _on_v_1_pressed() -> void:
+	g = 0
 	AudioServer.set_bus_volume_linear(0,0) 
 
 
 func _on_v_2_pressed() -> void:
+	g = 1
 	AudioServer.set_bus_volume_linear(0,0.3) 
 
 
 func _on_v_3_pressed() -> void:
+	g = 2
 	AudioServer.set_bus_volume_linear(0,0.7) 
 
 
+
 func _on_v_4_pressed() -> void:
+	g = 3
 	AudioServer.set_bus_volume_linear(0,1) 
 
 

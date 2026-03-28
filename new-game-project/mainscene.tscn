@@ -61,6 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://caoe5smeif0b1" path="res://assets/IMG_2890.png" id="58_7vnnl"]
 [ext_resource type="AudioStream" uid="uid://bee1bfurtptwb" path="res://starts/ForMillionsAmbience.wav" id="59_5jo5x"]
 [ext_resource type="Texture2D" uid="uid://8my7brs7rkhb" path="res://assets/karteczka_meoww.png" id="60_utbtm"]
+[ext_resource type="Texture2D" uid="uid://j85b3wntno7y" path="res://IMG_2928.png" id="62_wqh86"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_si422"]
 texture = ExtResource("3_7vnnl")
@@ -958,6 +959,107 @@ tracks/3/keys = {
 _data = {
 &"RESET": SubResource("Animation_4tqfu"),
 &"new_animation": SubResource("Animation_wqh86")
+}
+
+[sub_resource type="Animation" id="Animation_m5ygy"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_e0jif"]
+resource_name = "new_animation"
+length = 10.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.17666666, 0, 0, 0, 1, -0.88166666, 0, 0, 0, 1, -0.10833335, 0, 0, 0),
+"times": PackedFloat32Array(0, 1.06, 9.2, 9.85)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.17666666, 0, 0, 0, 1, -0.88166666, 0, 0, 0, 1, -0.10833335, 0, 0, 0),
+"times": PackedFloat32Array(0, 1.06, 9.2, 9.85)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.17666666, 0, 0, 0, 1, -0.88166666, 0, 0, 0, 1, -0.10833335, 0, 0, 0),
+"times": PackedFloat32Array(0, 1.06, 9.2, 9.85)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.17666666, -0.16666667, 0, 0, 1, -0.88166666, 0, 0, 0, 0, -0.10833335, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 1.06, 9.2, 9.85)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ohyyk"]
+_data = {
+&"RESET": SubResource("Animation_m5ygy"),
+&"new_animation": SubResource("Animation_e0jif")
 }
 
 [node name="Mainscene" type="Node2D" unique_id=1416502856]
@@ -2538,6 +2640,43 @@ flat = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="tip" unique_id=47822821]
 libraries/ = SubResource("AnimationLibrary_m5ygy")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1564385558]
+
+[node name="Control" type="Control" parent="CanvasLayer3" unique_id=1289762568]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer3/Control" unique_id=999328022]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.84313726)
+
+[node name="error" type="TextureRect" parent="CanvasLayer3/Control" unique_id=798950945]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("62_wqh86")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer3/Control" unique_id=900316798]
+libraries/ = SubResource("AnimationLibrary_ohyyk")
 
 [connection signal="pressed" from="CanvasLayer2/return" to="CanvasLayer2/return" method="_on_return_pressed"]
 [connection signal="pressed" from="buttons/reactor" to="." method="_on_reactor_pressed"]

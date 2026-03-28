@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b1e6tuit4euh4"]
 
+[ext_resource type="Script" uid="uid://d4dugm2lklk64" path="res://main menu/authors.gd" id="1_g4i0s"]
 [ext_resource type="Texture2D" uid="uid://3iwgvjlmyu1y" path="res://main menu/Credits.png" id="1_ii4w1"]
 [ext_resource type="FontFile" uid="uid://28e2vuijk0sj" path="res://main menu/Lucznik1303Plus-z0aG.ttf" id="2_malvc"]
 [ext_resource type="Texture2D" uid="uid://dpm2oex10t25j" path="res://assets/button.PNG" id="2_u7t8m"]
@@ -7,7 +8,7 @@
 [ext_resource type="Script" uid="uid://ypjf428m44xk" path="res://main menu/button_return.gd" id="5_vm8q0"]
 [ext_resource type="Texture2D" uid="uid://b1woiuh7ww0ld" path="res://main menu/Grafika_bez_nazwy.png" id="6_pmosu"]
 [ext_resource type="AudioStream" uid="uid://6nr5k2yov1b" path="res://main menu/Button.wav" id="7_5sgfn"]
-[ext_resource type="AudioStream" uid="uid://8t2i0mxagkpn" path="res://main menu/MainMenu (1).wav" id="8_4addc"]
+[ext_resource type="AudioStream" uid="uid://e8d6oakdx3mb" path="res://assets/sounds/SFX/XD WTF.mp3" id="9_bttrn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7t8m"]
 texture = ExtResource("1_ii4w1")
@@ -24,6 +25,7 @@ texture = ExtResource("4_vm8q0")
 [node name="Control" type="Control" unique_id=1711496834]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_g4i0s")
 
 [node name="Panel" type="Panel" parent="." unique_id=1912119142]
 layout_mode = 0
@@ -66,7 +68,8 @@ unique_name_in_owner = true
 stream = ExtResource("7_5sgfn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=687800918]
-stream = ExtResource("8_4addc")
+stream = ExtResource("9_bttrn")
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/return" to="VBoxContainer/return" method="_on_return_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

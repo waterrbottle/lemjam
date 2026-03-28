@@ -2,6 +2,7 @@ extends Node2D
 var sabotaged = 0
 var done = 0
 var quest = ""
+var errorshown = false
 var names = {"reactor": "przekazywanie komunikatu",
 "screws": "uszczelnianie silnika", "cables":"wpinanie przewodów", "slider": "ustawienie trajektorii predkosci i kata lotu",
 "codes": "wprowadzanie kodu bezpieczenstwa"}
@@ -41,6 +42,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if ! Global.donegames.has(-1):
+		if! Global.donegames == [0,0,0,0,0]:
+			if !Global.donegames == [1,1,1,1,1]: 
+				if errorshown == false:
+					$CanvasLayer3/Control/AnimationPlayer.play("new_animation")
+					errorshown=true
+	$CanvasLayer3/Control/error.modulate = Color(randf_range(0.7,1),0,randf_range(0,0.3))
 	if Global.donegames == [0,0,0,0,0]:
 		$Panel.show()
 	if Global.donegames == [1,1,1,1,1]: 

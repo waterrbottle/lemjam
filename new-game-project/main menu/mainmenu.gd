@@ -4,7 +4,8 @@ extends Control
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
+func _ready() -> void:
+	Global.donegames = [-1,-1,-1,-1,-1]
 func _on_start_pressed() -> void:
 	$clickaudio.play()
 	await get_tree().create_timer(0.5).timeout
